@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Brooklyn Public Library</title>
 </head>
 <body>
-    
+    <header>
+        <section class="header">
+            <div class="wrapper">
+                <div class="header-content">
+                    <h1>Brooklyn Public Library</h1>
+                    <div class="header-blocks">
+                        <nav class="header-navigation">
+                            <li class="nav-item"><a href="#about">About</a></li>
+                            <li class="nav-item"><a href="#favorites">Favorites</a></li>
+                            <li class="nav-item"><a href="#coffeeShop">Coffee shop</a></li>
+                            <li class="nav-item"><a href="#contacts">Contacts</a></li>
+                            <li class="nav-item"><a href="#libraryCard">Library Card</a></li>
+                        </nav>
+                        <div class="header-login">
+                            <img src="assets/img/small/subtract.svg" alt="login" class="login-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div class="wrapper-welcome">
+                <div class="welcome-content">
+                    <div class="welcome__text-content">
+                        <p class="welcome-text">
+                            Welcome to the Brooklyn Library
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="wrapper">
+                <div class="about-content">
+                    <h2 class="about-header" id="about">About</h2>
+                    <p class="about-text">
+                        The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside 
+                    </p>
+                    <div class="about-images__content">
+                        <div class="about-images__item">
+                            <img src="assets/img/big/girl.png" alt="girl">
+                        </div>
+
+                        <div class="about-images__item">
+                            <img src="assets/img/big/statues.png" alt="statues">
+                        </div>
+
+                        <div class="about-images__item">
+                            <img src="assets/img/big/shelves.png" alt="shelves">
+                        </div>
+                    </div>
+
+                    <div class="about-pagination">
+                        <div class="pagination-content">
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                            <div class="pagination-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="favorites">
+            <div class="wrapper">
+                <div class="favorites-content">
+                    <h2 class="favorites-header" id="favorites">Favorites</h2>
+                    <div class="favorites__radio-select">
+                        <p class="radio-select__header">Pick favorites of season</p>
+                        <div class="radio-select__bloks">
+                            <div class="select-block">
+                                <input type="radio" name="season" id="winter">
+                                <lable for="winter">Winter</lable>
+                            </div>
+
+                            <div class="select-block">
+                                <input type="radio" name="season" id="spring">
+                                <lable for="spring">Spring</lable>
+                            </div>
+
+                            <div class="select-block">
+                                <input type="radio" name="season" id="summer">
+                                <lable for="summer">Summer</lable>
+                            </div>
+                            
+                            <div class="select-block">
+                                <input type="radio" name="season" id="autumn">
+                                <lable for="autumn">Autumn</lable>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
