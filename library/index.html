@@ -324,7 +324,7 @@
                     </p>
                     <div class="coffee-blocks__menu">
                         <div class="menu-block coffee-Tea">
-                            <h2 class="menu-block__header">Coffee & Tea </h2>
+                            <h3 class="menu-block__header">Coffee & Tea </h3>
                             <div class="menu-block__items">
                                 <div class="menu-item">
                                     <p class="menu-item__title">Cold Brew Coffee</p>
@@ -365,7 +365,7 @@
                         </div>
 
                         <div class="menu-block desserts-Cakes">
-                            <h2 class="menu-block__header">Desserts & Cakes</h2>
+                            <h3 class="menu-block__header">Desserts & Cakes</h3>
                             <div class="menu-block__items">
                                 <div class="menu-item">
                                     <p class="menu-item__title">Forest Gateau</p>
@@ -434,13 +434,85 @@
         <section class="library-cards">
             <div class="wrapper">
                 <div class="library-cards-content">
-                    <h2 class="library-cards__header" id="libraryCard"></h2>
+                    <h2 class="library-cards__header" id="libraryCard">Digital Library Cards</h2>
                     <div class="library-cards__blocks">
+                        <div class="library-cards-block__find-card">
+                            <h3 class="find-card__header">Find your Library card</h3>
+                            <form action="#" class="find-card__form">
+                                <div class="form-input-block">
+                                    <label for="inputBlock" class="input-block__label">Brooklyn Public Library</label>
+                                    <input type="text" name="inputBlockText" id="inputBlock" class="input-block__text" pattern="[A-Za-zА-Яа-яЁё\s]+" placeholder="Reader's name">
+                                    <input type="text" name="inputBlockNumber" id="inputBlock" class="input-block__number" pattern="[0-9\-]+" placeholder="Card number">
+                                </div>
+                                <input type="submit" value="Check the card">
+                            </form>
+                        </div>
 
+                        <div class="library-cards-block__get-card">
+                            <h3 class="get-card__header">Get a reader card</h3>
+                            <p class="get-card__text">
+                                You will be able to see a reader card after logging into account or you can register a new account
+                            </p>
+                            <div class="get-card__buttons">
+                                <button class="card-button__sign-up">Sign Up</button>
+                                <button class="card-button__log-in">Log in</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <section class="footer-library">
+            <div class="wrapper">
+                <div class="footer-library-content">
+                    <div class="footer-library-content__bloks">
+                        <div class="library-content-block__places">
+                            <p class="block-places__adress">
+                                286 Cadman Plaza, New York, NY 11238, United States
+                            </p>
+                            <ul class="block-places__social-networks">
+                                <li class="social-networks__link">
+                                    <a href="https://twitter.com/BKLYNlibrary" target="_blank"><img src="assets/img/small/twitter.svg" alt="twitter"></a>
+                                </li>
+
+                                <li class="social-networks__link">
+                                    <a href="https://www.instagram.com/bklynlibrary/" target="_blank"><img src="assets/img/small/instagram.svg" alt="instagram"></a>
+                                </li>
+
+                                <li class="social-networks__link">
+                                    <a href="https://www.facebook.com/BrooklynPublicLibrary/" target="_blank"><img src="assets/img/small/facebook.svg" alt="facebook"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="library-content-block__work-time">
+                            <div class="block-work-time">
+                                <p class="work-days">Mon - Fri</p>
+                                <p class="work-hours">08:00 am - 07:00 pm</p>
+                            </div>
+
+                            <div class="block-work-time">
+                                <p class="work-days">Sat - Sun</p>
+                                <p class="work-hours">10:00 am - 06:00 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-rsschool">
+            <div class="wrapper">
+                <div class="footer-rsschool__content">
+                    <p class="footer-rsschool__date">2023</p>
+                    <a href="https://rs.school/js-stage0/" class="footer-rsschool__link-school" target="_blank">The Rolling Scopes School</a>
+                    <a href="https://github.com/EugeniiSh" class="footer-rsschool__link-ghub" target="_blank">Evgenii</a>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
