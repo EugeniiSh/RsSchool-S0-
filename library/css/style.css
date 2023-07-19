@@ -1,0 +1,170 @@
+:root
+{
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --black-bgc: #0C0C0E;
+    --gold-color: #BB945F;
+    --grey-color: #8E8E8E;
+
+    --font-family-header: 'Forum', cursive;
+    --font-family-text: 'Inter', sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --font-size-light: 10px;
+    --font-size-medium: 15px;
+    --font-size-height: 20px;
+    --font-size-h2: 40px;
+    --font-size-h1: 30px;
+}
+
+/* Общие ///////////////////////////////////*/
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: var(--font-family-header);
+    font-family: var(--font-family-text);
+    color: var(--black-color);
+}
+
+header
+{
+    color: var(--white-color);
+}
+
+section
+{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.wrapper
+{
+    width: 97.22%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3
+{
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-regular);
+}
+
+/* Секция heading ////////////////////////////*/
+
+.heading
+{
+    background-color: var(--black-bgc);
+}
+
+.heading-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.heading-content h1
+{
+    padding: 20px 0;
+    font-size: var(--font-size-h1);
+}
+
+.heading-blocks
+{
+    display: flex;
+    gap: 38px;
+}
+
+.heading-navigation
+{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 20px 0;
+    font-size: var(--font-size-height);
+}
+
+.nav-item a
+{
+    padding: 2px;
+    color: var(--white-color); 
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-item a:hover
+{
+    color: var(--black-bgc);
+    background-color: var(--white-color);
+}
+
+.heading-login
+{
+    padding: 31px 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.heading-login img
+{
+    transition: 0.3s;
+}
+
+.heading-login img:hover
+{
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--white-color);
+}
+
+/* Секция welcome ////////////////////////////*/
+
+.welcome
+{
+    display: flex;
+    align-items: center;
+    height: 600px;
+    color: var(--white-color);
+    background-image: url(../assets/img/big/welcome-background.png);
+}
+
+.welcome-content
+{
+    width: 41.66%;
+    height: 36.66%;
+
+    font-family: var(--font-family-header);
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 3px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    background-color: var(--black-bgc);
+}
+
+.welcome__text-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
