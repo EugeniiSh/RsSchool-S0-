@@ -67,6 +67,27 @@ h3
     font-weight: var(--font-weight-regular);
 }
 
+h2
+{
+    position: relative;
+    margin-bottom: 61px;
+
+    font-size: var(--font-size-h2);
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: var(--black-bgc);
+}
+
+h2::before
+{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: -20px;
+    width: 50px;
+    border: 1px solid var(--black-bgc);
+}
+
 /* Секция heading ////////////////////////////*/
 
 .heading
@@ -167,4 +188,129 @@ h3
     flex-direction: column;
     justify-content: center;
     height: 100%;
+}
+
+/* Секция about ////////////////////////////*/
+
+.about-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 40px;
+}
+
+/* .about-header
+{
+    position: relative;
+    margin-bottom: 61px;
+}
+
+.about-header::before
+{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: -20px;
+    width: 50px;
+    border: 1px solid var(--black-bgc);
+} */
+
+.about-text
+{
+    margin-bottom: 30px;
+    font-size: var(--font-size-height);
+}
+
+.about-images__content
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.pagination-content
+{
+    display: flex;
+}
+
+.pagination-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.pagination-item:hover div
+{
+    box-shadow: 0 0 0 3px var(--grey-color);
+}
+
+.pagination-item div
+{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--black-bgc);
+    transition: 0.3s;
+}
+
+.pagination-item:first-child div
+{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--gold-color);
+    transition: 0.3s;
+}
+
+/* Секция favorites ////////////////////////////*/
+
+.favorites-content
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 40px;
+}
+.favorites-header
+{
+    align-self: center;
+}
+
+.favorites-header::before
+{
+    left: 35%;
+}
+
+.radio-select__header
+{
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-height);
+    margin-bottom: 40px;
+}
+
+.radio-select__bloks
+{
+    display: flex;
+    gap: 80px;
+    font-size: var(--font-size-height);
+}
+
+.winter
+{
+    font-weight: var(--font-weight-bold);
+}
+
+.select-block
+{
+    padding: 5px 5px 5px 0;
+}
+
+.select-block label
+{
+    margin-left: 20px;
 }
