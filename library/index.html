@@ -18,11 +18,13 @@
                     <h1>Brooklyn Public Library</h1>
                     <div class="heading-blocks">
                         <nav class="heading-navigation">
-                            <li class="nav-item"><a href="#about">About</a></li>
-                            <li class="nav-item"><a href="#favorites">Favorites</a></li>
-                            <li class="nav-item"><a href="#coffeeShop">Coffee shop</a></li>
-                            <li class="nav-item"><a href="#contacts">Contacts</a></li>
-                            <li class="nav-item"><a href="#libraryCard">Library Card</a></li>
+                            <ul class="navigation-block">
+                                <li class="nav-item"><a href="#about">About</a></li>
+                                <li class="nav-item"><a href="#favorites">Favorites</a></li>
+                                <li class="nav-item"><a href="#coffeeShop">Coffee shop</a></li>
+                                <li class="nav-item"><a href="#contacts">Contacts</a></li>
+                                <li class="nav-item"><a href="#libraryCard">Library Card</a></li>
+                            </ul>
                         </nav>
                         <div class="heading-login">
                             <img src="assets/img/small/subtract.svg" alt="login" class="login-img">
@@ -35,21 +37,11 @@
 
     <main>
         <section class="welcome">
-            <!-- <div class="wrapper"> -->
                 <div class="welcome-content">
-                    <div class="welcome__text-content">
-                        <p class="welcome-text">
-                            Welcome
-                        </p>
-                        <p class="welcome-text">
-                            to the Brooklyn
-                        </p>
-                        <p class="welcome-text">
-                            Library
-                        </p>
-                    </div>
+                    <h3 class="welcome__text-content">
+                        Welcome <br>to the Brooklyn <br>Library
+                    </h3>
                 </div>
-            <!-- </div> -->
         </section>
 
         <section class="about">
@@ -346,7 +338,7 @@
                         In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
                     </p>
                     <div class="coffee-blocks__menu">
-                        <div class="menu-block coffee-Tea">
+                        <div class="menu-block coffee-tea">
                             <h3 class="menu-block__header">Coffee & Tea </h3>
                             <div class="menu-block__items">
                                 <div class="menu-item">
@@ -387,7 +379,7 @@
                             </div>
                         </div>
 
-                        <div class="menu-block desserts-Cakes">
+                        <div class="menu-block desserts-cakes">
                             <h3 class="menu-block__header">Desserts & Cakes</h3>
                             <div class="menu-block__items">
                                 <div class="menu-item">
@@ -463,9 +455,9 @@
                             <h3 class="find-card__header">Find your Library card</h3>
                             <form action="#" class="find-card__form">
                                 <div class="form-input-block">
-                                    <label for="inputBlock" class="input-block__label">Brooklyn Public Library</label>
-                                    <input type="text" name="inputBlockText" id="inputBlock" class="input-block__text" pattern="[A-Za-zА-Яа-яЁё\s]+" placeholder="Reader's name">
-                                    <input type="text" name="inputBlockNumber" id="inputBlock" class="input-block__number" pattern="[0-9\-]+" placeholder="Card number">
+                                    <p class="input-block__label">Brooklyn Public Library</p>
+                                    <input type="text" name="inputBlockText" class="input-block__text" pattern="[A-Za-zА-Яа-яЁё\s]+" placeholder="Reader's name">
+                                    <input type="text" name="inputBlockNumber" class="input-block__number" pattern="[0-9\-]+" placeholder="Card number">
                                 </div>
                                 <input type="submit" value="Check the card">
                             </form>
@@ -493,9 +485,11 @@
                 <div class="footer-library-content">
                     <div class="footer-library-content__bloks">
                         <div class="library-content-block__places">
-                            <p class="block-places__adress">
-                                286 Cadman Plaza, New York, NY 11238, United States
-                            </p>
+                            <h4 class="block-places__adress">
+                                <a href="https://goo.gl/maps/N3FMD8u6ALph2Eod6" target="_blank" class="block-places__link">
+                                    286 Cadman Plaza, New York, NY 11238, United States
+                                </a>
+                            </h4>
                             <ul class="block-places__social-networks">
                                 <li class="social-networks__link">
                                     <a href="https://twitter.com/BKLYNlibrary" target="_blank"><img src="assets/img/small/twitter.svg" alt="twitter"></a>
@@ -530,7 +524,7 @@
         <section class="footer-rsschool">
             <div class="wrapper">
                 <div class="footer-rsschool__content">
-                    <p class="footer-rsschool__date">2023</p>
+                    <h4 class="footer-rsschool__date">2023</h4>
                     <a href="https://rs.school/js-stage0/" class="footer-rsschool__link-school" target="_blank">The Rolling Scopes School</a>
                     <a href="https://github.com/EugeniiSh" class="footer-rsschool__link-ghub" target="_blank">Evgenii</a>
                 </div>
