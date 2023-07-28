@@ -91,10 +91,10 @@ h2::before
 
 /* Секция heading ////////////////////////////*/
 
-header
+/* header
 {
     background-color: var(--black-bgc);
-}
+} */
 
 .heading
 {
@@ -175,7 +175,8 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
+    width: 1440px;
     min-height: 600px;
     color: var(--white-color);
     background-image: url(../assets/img/big/welcome-background.png);
@@ -817,10 +818,10 @@ header
 
 /* Секция footer-library ////////////////////////////*/
 
-footer
+/* footer
 {
     background-color: var(--black-bgc);
-}
+} */
 
 .footer-library
 {
