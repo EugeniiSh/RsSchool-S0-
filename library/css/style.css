@@ -247,6 +247,12 @@ h2::before
     display: flex;
 }
 
+.pagination-content > div:nth-of-type(4),
+.pagination-content > div:nth-of-type(5)
+{
+    display: none;
+}
+
 .pagination-item
 {
     display: flex;

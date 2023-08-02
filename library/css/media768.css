@@ -1,0 +1,83 @@
+@media (max-width: 768px)
+{
+    /* Общие ///////////////////////////////////*/
+
+    .wrapper
+    {
+        width: 94.79%;
+        margin: 0 auto;
+    }
+
+    section
+    {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    /* Секция welcome ////////////////////////////*/
+    .welcome
+    {
+        width: 768px;
+        background-image: url(../assets/img/big/welcome-background768.png);
+    }
+
+    .wrapper-welcome
+    {
+        min-width: 768px;
+    }
+
+    .welcome-content
+    {
+        width: 600px;
+    }
+
+    /* Секция about ////////////////////////////*/
+    .about-text
+    {
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .about-images__content
+    {
+        margin-bottom: 25px;
+    }
+
+    .about-images__content > div:nth-child(1)
+    {
+        position: relative;
+    }
+
+    .about-images__content > div:nth-child(1)::before
+    {
+        content: url(../assets/img/small/arrow-left.svg);
+        position: absolute;
+        left: -58px;
+        top: 50%;
+    }
+
+    .about-images__content > div:nth-child(1)::after
+    {
+        content: url(../assets/img/small/arrow-right.svg);
+        position: absolute;
+        right: -58px;
+        top: 50%;
+    }
+
+    .about-images__content > div:nth-child(2)
+    {
+        display: none;
+    }
+
+    .about-images__content > div:nth-child(3)
+    {
+        display: none;
+    }
+
+    .pagination-content > div:nth-of-type(4),
+    .pagination-content > div:nth-of-type(5)
+    {
+        display: flex;
+    }
+
+}
