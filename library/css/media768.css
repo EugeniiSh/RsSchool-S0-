@@ -165,6 +165,11 @@
     }
 
     /* Секция favorites ////////////////////////////*/
+    .favorites-content
+    {
+        padding: 20px 0 40px;
+    }
+
     .radio-select__bloks
     {
         gap: 70px;
@@ -285,11 +290,6 @@
         text-align: center;
     }
 
-    .find-card__header
-    {
-        margin-bottom: 25px;
-    }
-
     .get-card__header
     {
         margin-bottom: 40px;
@@ -317,5 +317,6 @@
     .footer-rsschool__link-school
     {
         margin-right: 25px;
+        margin-left: 0;
     }
 }
