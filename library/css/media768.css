@@ -14,6 +14,89 @@
         margin: 0 auto;
     }
 
+
+    /* Секция heading ////////////////////////////*/
+    .heading-blocks
+    {
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .heading-navigation
+    {
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        top: 94px;
+    }
+
+    .navigation-block
+    {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 0 80px 0;
+        width: 332px;
+        background-color: #0C0C0E;
+    }
+
+    .nav-item
+    {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 78px;
+    }
+
+    .nav-item  a
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border-radius: 0;
+        background-color: #0C0C0E;
+    }
+
+    .heading-login
+    {
+        padding: 31px 0 30px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .heading-burger
+    {
+        display: flex;
+        align-items: center;
+        width: 45px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .heading-burger > span,
+    .heading-burger > span::before,
+    .heading-burger > span::after
+    {
+        position: absolute;
+        width: 45px;
+        height: 1.5px;
+        background-color: #FFFFFF;
+    }
+
+    .heading-burger > span::before
+    {
+        content: '';
+        top: -10px;
+    }
+
+    .heading-burger > span::after
+    {
+        content: '';
+        top: 10px;
+    }
+
     /* Секция welcome ////////////////////////////*/
     .welcome
     {
@@ -35,7 +118,7 @@
     .about-text
     {
         text-align: center;
-        line-height: 40px;
+        line-height: 36px;
         margin-bottom: 20px;
     }
 
@@ -179,6 +262,11 @@
     }
 
     /* Секция library-cards ////////////////////////////*/
+    .library-cards-content
+    {
+        padding: 10px 0 40px;
+    }
+
     .library-cards__blocks
     {
         flex-direction: column;
@@ -195,5 +283,39 @@
     {
         width: 550px;
         text-align: center;
+    }
+
+    .find-card__header
+    {
+        margin-bottom: 25px;
+    }
+
+    .get-card__header
+    {
+        margin-bottom: 40px;
+        font-size: var(--font-size-h1);
+        letter-spacing: 0.5px;
+    }
+
+    .get-card__text
+    {
+        margin-bottom: 40px;
+        letter-spacing: 0.5px;
+    }
+
+    .get-card__buttons button
+    {
+        margin-left: 0px;
+    }
+
+    .card-button__sign-up
+    {
+        margin-right: 20px;
+    }
+
+    /* Секция footer-rsschool ////////////////////////////*/
+    .footer-rsschool__link-school
+    {
+        margin-right: 25px;
     }
 }

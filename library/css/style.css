@@ -91,11 +91,6 @@ h2::before
 
 /* Секция heading ////////////////////////////*/
 
-/* header
-{
-    background-color: var(--black-bgc);
-} */
-
 .heading
 {
     background-color: var(--black-bgc);
@@ -167,6 +162,8 @@ h2::before
     border-radius: 50%;
     box-shadow: 0 0 25px var(--white-color);
 }
+
+
 
 /* Секция welcome ////////////////////////////*/
 
@@ -824,10 +821,6 @@ h2::before
 
 /* Секция footer-library ////////////////////////////*/
 
-/* footer
-{
-    background-color: var(--black-bgc);
-} */
 
 .footer-library
 {
