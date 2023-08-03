@@ -286,7 +286,7 @@ h2::before
 {
     display: flex;
     flex-direction: column;
-    padding: 20px 0 40px;
+    padding: 15px 0 40px;
 }
 .favorites-header
 {
@@ -667,7 +667,7 @@ h2::before
 
 .library-cards-content
 {
-    padding: 5px 0 40px;
+    padding: 10px 0 40px;
 }
 
 .library-cards__header
@@ -701,7 +701,7 @@ h2::before
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 20px 30px;
+    padding: 18px 20px 30px;
     border: 3px solid var(--gold-color);
     box-shadow: 0 2px 5px var(--grey-color);
 }
@@ -712,7 +712,7 @@ h2::before
     flex-direction: column;
     width: 100%;
     padding: 20px 20px 25px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     font-family: var(--font-family-header);
     font-size: var(--font-size-h1);
@@ -768,7 +768,8 @@ h2::before
 
 .library-cards-block__get-card
 {
-    width: 32.57%;
+    width: 33.2%;
+    /* width: 32.87%; */
     text-align: right;
 }
 
@@ -781,10 +782,11 @@ h2::before
 
 .get-card__text
 {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
     width: 100%;
     font-size: var(--font-size-height);
     line-height: 40px;
+    letter-spacing: 0.4px;
 }
 
 .get-card__buttons button
@@ -923,6 +925,8 @@ h2::before
 
 .footer-rsschool__link-school
 {
+    margin-left: 25px;
+
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-height);
     line-height: 20px;
