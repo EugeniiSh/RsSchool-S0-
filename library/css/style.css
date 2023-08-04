@@ -91,11 +91,6 @@ h2::before
 
 /* Секция heading ////////////////////////////*/
 
-/* header
-{
-    background-color: var(--black-bgc);
-} */
-
 .heading
 {
     background-color: var(--black-bgc);
@@ -167,6 +162,8 @@ h2::before
     border-radius: 50%;
     box-shadow: 0 0 25px var(--white-color);
 }
+
+
 
 /* Секция welcome ////////////////////////////*/
 
@@ -245,6 +242,12 @@ h2::before
 .pagination-content
 {
     display: flex;
+}
+
+.pagination-content > div:nth-of-type(4),
+.pagination-content > div:nth-of-type(5)
+{
+    display: none;
 }
 
 .pagination-item
@@ -820,10 +823,6 @@ h2::before
 
 /* Секция footer-library ////////////////////////////*/
 
-/* footer
-{
-    background-color: var(--black-bgc);
-} */
 
 .footer-library
 {

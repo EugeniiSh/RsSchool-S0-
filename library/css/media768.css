@@ -1,0 +1,351 @@
+@media (max-width: 768px)
+{
+    /* Общие ///////////////////////////////////*/
+    .wrapper
+    {
+        width: 94.79%;
+        margin: 0 auto;
+    }
+
+    section
+    {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+
+    /* Секция heading ////////////////////////////*/
+    .heading-blocks
+    {
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .heading-navigation
+    {
+        position: absolute;
+        /* right: -332px; */
+        /* top: 94px; */
+        /* width: 0; */
+        top: -570px;
+        right: 0;
+        opacity: 0;
+        transition: 0.7s;
+    }
+
+    .heading-navigation.active
+    {
+        top: 94px;
+        opacity: 1;
+    }
+
+    .navigation-block
+    {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 0 80px 0;
+        width: 332px;
+        background-color: #0C0C0E;
+    }
+
+    .nav-item
+    {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 78px;
+    }
+
+    .nav-item  a
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border-radius: 0;
+        background-color: #0C0C0E;
+    }
+
+    .heading-login
+    {
+        padding: 31px 0 30px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .heading-burger
+    {
+        display: flex;
+        align-items: center;
+        width: 45px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .heading-burger > span,
+    .heading-burger > span::before,
+    .heading-burger > span::after
+    {
+        position: absolute;
+        width: 45px;
+        height: 1.5px;
+        opacity: 1;
+        transition: 0.7s;
+        background-color: #FFFFFF;
+    }
+
+    .heading-burger > span::before
+    {
+        content: '';
+        top: -10px;
+    }
+
+    .heading-burger > span::after
+    {
+        content: '';
+        top: 10px;
+    }
+
+    .heading-burger.active > span
+    {
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+
+    .heading-burger.active  > span::before
+    {
+        opacity: 0;
+    }
+
+    .heading-burger.active  > span::after
+    {
+        top: 0;
+        transform: rotate(90deg);
+        opacity: 1;
+    }
+
+    /* Секция welcome ////////////////////////////*/
+    .welcome
+    {
+        width: 768px;
+        background-image: url(../assets/img/big/welcome-background768.png);
+    }
+
+    .wrapper-welcome
+    {
+        min-width: 768px;
+    }
+
+    .welcome-content
+    {
+        width: 600px;
+    }
+
+    /* Секция about ////////////////////////////*/
+    .about-text
+    {
+        text-align: center;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about-images__content
+    {
+        margin-bottom: 15px;
+    }
+
+    .about-images__content > div:nth-child(1)
+    {
+        position: relative;
+    }
+
+    .about-images__content > div:nth-child(1)::before
+    {
+        content: url(../assets/img/small/arrow-left.svg);
+        position: absolute;
+        left: -58px;
+        top: 50%;
+    }
+
+    .about-images__content > div:nth-child(1)::after
+    {
+        content: url(../assets/img/small/arrow-right.svg);
+        position: absolute;
+        right: -58px;
+        top: 50%;
+    }
+
+    .about-images__content > div:nth-child(2)
+    {
+        display: none;
+    }
+
+    .about-images__content > div:nth-child(3)
+    {
+        display: none;
+    }
+
+    .pagination-content > div:nth-of-type(4),
+    .pagination-content > div:nth-of-type(5)
+    {
+        display: flex;
+    }
+
+    /* Секция favorites ////////////////////////////*/
+    .favorites-content
+    {
+        padding: 20px 0 40px;
+    }
+
+    .radio-select__bloks
+    {
+        gap: 70px;
+    }
+
+    .favorites__book-blocks
+    {
+        display: grid;
+        grid-template-columns: 69px 390px 160px 40px 69px;
+        grid-template-rows: 255px 300px 40px 255px 300px 40px 255px 300px 40px 255px 300px;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(1)
+    {
+        grid-column: 2/4;
+        grid-row: 1/3;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(1) + .block-item__book-img
+    {
+        grid-column: 3/5;
+        grid-row: 2/3;
+        z-index: 1;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(3)
+    {
+        grid-column: 2/4;
+        grid-row: 4/6;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(3) + .block-item__book-img
+    {
+        grid-column: 3/5;
+        grid-row: 5/6;
+        z-index: 1;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(5)
+    {
+        grid-column: 2/4;
+        grid-row: 7/9;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(5) + .block-item__book-img
+    {
+        grid-column: 3/5;
+        grid-row: 8/9;
+        z-index: 1;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(7)
+    {
+        grid-column: 2/4;
+        grid-row: 10/12;
+    }
+
+    .favorites__book-blocks > div:nth-of-type(7) + .block-item__book-img
+    {
+        grid-column: 3/5;
+        grid-row: 11/12;
+        z-index: 1;
+    }
+
+    /* Секция coffee shop ////////////////////////////*/
+    .coffee-text
+    {
+        font-size: 20px;
+        letter-spacing: 1.9px;
+    }
+
+    .coffee-blocks__menu
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: start;
+    }
+
+    .desserts-cakes
+    {
+        align-self: end;
+    }
+
+    /* Секция contacts ////////////////////////////*/
+    .contacts-blocks
+    {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .contacts-block__map
+    {
+        align-self: center;
+    }
+
+    /* Секция library-cards ////////////////////////////*/
+    .library-cards-content
+    {
+        padding: 10px 0 40px;
+    }
+
+    .library-cards__blocks
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .library-cards-block__find-card
+    {
+        width: 600px;
+    }
+
+    .library-cards-block__get-card
+    {
+        width: 550px;
+        text-align: center;
+    }
+
+    .get-card__header
+    {
+        margin-bottom: 40px;
+        font-size: var(--font-size-h1);
+        letter-spacing: 0.5px;
+    }
+
+    .get-card__text
+    {
+        margin-bottom: 40px;
+        letter-spacing: 0.5px;
+    }
+
+    .get-card__buttons button
+    {
+        margin-left: 0px;
+    }
+
+    .card-button__sign-up
+    {
+        margin-right: 20px;
+    }
+
+    /* Секция footer-rsschool ////////////////////////////*/
+    .footer-rsschool__link-school
+    {
+        margin-right: 25px;
+        margin-left: 0;
+    }
+}
