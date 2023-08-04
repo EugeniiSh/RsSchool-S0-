@@ -1,8 +1,13 @@
-console.log();
+console.log('Library part 1');
 console.log('1.Вёрстка валидная +10(10)');
 console.log('2.Вёрстка семантическая +16(16)');
 console.log('3.Вёрстка соответствует макету +54(54)');
-console.log('4.Общие требования к верстке +18(20) \n - плавная прокрутка по якорям -2.');
+console.log('4.Общие требования к верстке +18(20) \n - плавная прокрутка по якорям -2. \n');
+
+console.log('Library part 2');
+console.log('1.Вёрстка соответствует макету. Ширина экрана 768px +26 (26)');
+console.log('2.Нет горизонтальной прокрутки до 640px, \n контент страницы сохранется +12(12)');
+console.log('3.На ширине экрана 768рх реализовано адаптивное меню +10 (12) \n - размеры открытого бургер-меню соответствуют макету -2');
 
 let burger = document.querySelector('.heading-burger');
 let burgerBlock = document.querySelector('.burger-block');
@@ -46,7 +51,7 @@ function closeOnClick()
 
 window.addEventListener('click', (event) => 
 {
-    if((event.target !== burger) && (event.target !== navMenu) && (event.target !== burgerBlock))
+    if((event.target !== burger) && (event.target !== navBlock) && (event.target !== burgerBlock))
     {
         if(burger.classList.contains('active'))
         {

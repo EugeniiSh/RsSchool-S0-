@@ -1,12 +1,6 @@
 @media (max-width: 768px)
 {
     /* Общие ///////////////////////////////////*/
-
-    /* body
-    {
-        overflow-x: hidden;
-    } */
-
     .wrapper
     {
         width: 94.79%;
@@ -41,15 +35,8 @@
 
     .heading-navigation.active
     {
-        /* right: 0; */
         top: 94px;
         opacity: 1;
-    }
-
-    .heading-navigation.close
-    {
-        right: -100%;
-        opacity: 0;
     }
 
     .navigation-block
@@ -138,26 +125,6 @@
         transform: rotate(90deg);
         opacity: 1;
     }
-
-    .heading-burger.close > span
-    {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-
-    .heading-burger.close  > span::before
-    {
-        opacity: 1;
-    }
-
-    .heading-burger.close  > span::after
-    {
-        top: 10px;
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-
-    
 
     /* Секция welcome ////////////////////////////*/
     .welcome
