@@ -160,18 +160,18 @@
 
     .about-images__content > div:nth-child(1)::before
     {
-        content: url(../assets/img/small/arrow-left.svg);
+        content: url(../assets/img/small/arrow-left-2.svg);
         position: absolute;
-        left: -58px;
-        top: 50%;
+        left: -72px;
+        top: 52%;
     }
 
     .about-images__content > div:nth-child(1)::after
     {
-        content: url(../assets/img/small/arrow-right.svg);
+        content: url(../assets/img/small/arrow-right-2.svg);
         position: absolute;
-        right: -58px;
-        top: 50%;
+        right: -72px;
+        top: 52%;
     }
 
     .about-images__content > div:nth-child(2)
