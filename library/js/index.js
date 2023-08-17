@@ -18,7 +18,6 @@ burger.addEventListener('click',
 
     function() 
     {
-        console.log('Burger-click');
         navMenu.classList.toggle('active');
     }
 );
@@ -27,7 +26,6 @@ burger.addEventListener('click',
 
     function() 
     {
-        console.log('Burger-click2');
         burger.classList.toggle('active');
     }
 );
