@@ -9,6 +9,8 @@ console.log('1.Вёрстка соответствует макету. Шири�
 console.log('2.Нет горизонтальной прокрутки до 640px, \n контент страницы сохранется +12(12)');
 console.log('3.На ширине экрана 768рх реализовано адаптивное меню +10 (12) \n - размеры открытого бургер-меню соответствуют макету -2');
 
+//BURGER-MENU/////////////////////////////////////////////////////
+
 let burger = document.querySelector('.heading-burger');
 let burgerBlock = document.querySelector('.burger-block');
 let navMenu = document.querySelector('.heading-navigation');
@@ -62,3 +64,91 @@ window.addEventListener('click', (event) =>
         };
     }    
 });
+
+//SLIDER-ABOUT/////////////////////////////////////////////////
+
+const sliderLine = document.querySelector('.about-images__content');
+const dots = document.querySelectorAll('.pagination-item');
+const prevButton = document.querySelector('.about-image__prev');
+const nextButton = document.querySelector('.about-image__next');
+
+let position = 0;
+let dotIndex = 0;
+
+const nextSlide = () => 
+{
+    if (position < ((dots.length - 1) * 475))
+    {
+        position += 475;
+        dotIndex++;       
+    }
+        
+
+    sliderLine.style.left = -position + 'px';
+    thisSlide(dotIndex);
+};
+
+const prevSlide = () => 
+{
+    if (position > 0)
+    {
+        position -= 475;
+        dotIndex--;
+    }    
+    
+    sliderLine.style.left = -position + 'px';
+    thisSlide(dotIndex);    
+};
+
+const thisSlide = (index) =>
+{
+    for (let dot of dots)
+    {
+        dot.querySelector('div').classList.remove('pagination-active');
+        dot.classList.remove('pagination-item__desktop-active');
+    }
+
+    dots[index].querySelector('div').classList.add('pagination-active');
+    dots[index].classList.add('pagination-item__desktop-active');
+
+    nextButton.classList.remove('arrow-disabled');
+    prevButton.classList.remove('arrow-disabled');
+
+    if(index === 4)
+        {
+            nextButton.classList.add('arrow-disabled')
+        }
+        else
+        {
+            if(index === 0)
+            {
+                prevButton.classList.add('arrow-disabled')
+            }
+            else
+            {
+                nextButton.classList.remove('arrow-disabled');
+                prevButton.classList.remove('arrow-disabled');
+            }           
+        }
+};   
+
+dots.forEach((dot, index) =>
+{
+    dot.addEventListener('click', () =>
+    {
+        position = 475 * index;
+        sliderLine.style.left = -position + 'px';
+        dotIndex = index;
+        thisSlide(dotIndex);      
+    })
+});
+
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+//----------Media (max-width: 768px)-----------------
+
+if (window.matchMedia("(max-width: 768px)").matches) 
+{
+    
+} 

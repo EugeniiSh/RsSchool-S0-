@@ -141,6 +141,11 @@
     }
 
     /* Секция about ////////////////////////////*/
+    .about-content
+    {
+        position: relative;
+    }
+
     .about-text
     {
         text-align: center;
@@ -148,12 +153,18 @@
         margin-bottom: 20px;
     }
 
+    .about-images__wrapper
+    {
+        width: 450px;
+        overflow: hidden;
+    }
+
     .about-images__content
     {
         margin-bottom: 15px;
     }
 
-    .about-images__content > div:nth-child(1)
+    /* .about-images__content > div:nth-child(1)
     {
         position: relative;
     }
@@ -182,12 +193,40 @@
     .about-images__content > div:nth-child(3)
     {
         display: none;
-    }
+    } */
 
     .pagination-content > div:nth-of-type(4),
     .pagination-content > div:nth-of-type(5)
     {
         display: flex;
+    }
+
+    .about-image__prev,
+    .about-image__next
+    {
+        display: flex;
+        position: absolute;
+        background-color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
+
+    .about-image__prev
+    {
+        left: 65px;
+        top: 510px;
+    }
+
+    .about-image__next
+    {
+        right: 65px;
+        top: 510px;
+    }
+
+    .arrow-disabled
+    {
+        opacity: 0.5;
+        cursor: auto;
     }
 
     /* Секция favorites ////////////////////////////*/

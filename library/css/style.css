@@ -231,12 +231,21 @@ h2::before
     font-size: var(--font-size-height);
 }
 
+.about-images__wrapper
+{
+    width: 1400px;
+    overflow: hidden;
+}
+
 .about-images__content
 {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    left: 0;
     gap: 25px;
     margin-bottom: 35px;
+    transition: 0.7s;
 }
 
 .pagination-content
@@ -274,14 +283,22 @@ h2::before
     transition: 0.3s;
 }
 
-.pagination-item:first-child div
+.pagination-item__desktop-active
 {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--gold-color);
-    transition: 0.3s;
+    cursor: auto;
 }
+
+.pagination-active
+{
+    background-color: var(--gold-color) !important;
+}
+
+.about-image__prev,
+.about-image__next
+{
+    display: none;
+}
+
 
 /* Секция favorites ////////////////////////////*/
 
