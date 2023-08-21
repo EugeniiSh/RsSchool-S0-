@@ -146,6 +146,56 @@ dots.forEach((dot, index) =>
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
 
+//SLIDER-FAVORITES/////////////////////////////////////////////////
+
+const radioInput = document.querySelectorAll('.block-radio');
+const favoritesBookBlocks = document.querySelector('.favorites__book-blocks');
+const winterSeason = document.querySelectorAll('.winter');
+const springSeason = document.querySelectorAll('.spring');
+const summerSeason = document.querySelectorAll('.summer');
+const autumSeason = document.querySelectorAll('.autum');
+
+radioInput.forEach((radio, index) =>
+{
+    radio.addEventListener('change', () =>
+    {
+        for (let bookBlocks of favoritesBookBlocks.querySelectorAll('div'))
+        {
+            bookBlocks.classList.remove('active__book');
+        }
+
+        switch(true)
+        {
+            case(index === 0):  
+                for (let season of winterSeason)
+                {
+                    season.classList.add('active__book');
+                }
+            break;
+            case(index === 1):  
+                for (let season of springSeason)
+                {
+                    season.classList.add('active__book');
+                }
+            break;
+            case(index === 2):  
+                for (let season of summerSeason)
+                {
+                    season.classList.add('active__book');
+                }
+            break;
+            case(index === 3):  
+                for (let season of autumSeason)
+                {
+                    season.classList.add('active__book');
+                }
+            break;
+        };
+    })
+});
+
+
+
 //----------Media (max-width: 768px)-----------------
 
 if (window.matchMedia("(max-width: 768px)").matches) 
