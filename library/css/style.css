@@ -89,6 +89,83 @@ h2::before
     border: 1px solid var(--black-bgc);
 }
 
+/* -----------------------------------------МОДАЛЬНЫЕ ОКНА ------------------------------ */
+.modal-window
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10; 
+    transition: .4s;
+}
+
+.modal-menu__profile-no-auth
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    height: 115px;
+    top: 55px;
+    right: 0;
+
+    font-size: var(--font-size-medium);
+    line-height: 20px;
+    color: var(--black-color);
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.profile-menu__active
+{
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.profile-no-auth__header
+{
+    margin: 5px 0 20px;
+    font-weight: var(--font-weight-bold);
+}
+
+.profile-no-auth__header::after
+{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    width: 40px;
+    border: 1px solid var(--gold-color);
+}
+
+.modal-menu__profile-no-auth button
+{
+    width: 100%;
+    padding: 5px 0;
+    font-family: var(--font-family-text);
+    border: none;
+    background-color: var(--white-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-menu__profile-no-auth button:hover
+{
+    color: var(--white-color);
+    background-color: var(--black-bgc);
+}
+/* -----------------------------------------МОДАЛЬНЫЕ ОКНА ------------------------------ */
+
 /* Секция heading ////////////////////////////*/
 
 .heading
@@ -147,6 +224,7 @@ h2::before
 
 .heading-login
 {
+    position: relative;
     padding: 31px 0;
     border-radius: 50%;
     cursor: pointer;

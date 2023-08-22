@@ -164,6 +164,7 @@ radioInput.forEach((radio, index) =>
             bookBlocks.classList.remove('active__book');
         }
 
+
         switch(true)
         {
             case(index === 0):  
