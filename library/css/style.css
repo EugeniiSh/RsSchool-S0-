@@ -192,7 +192,8 @@ cursor: pointer;
 
 .login-header__close,
 .register-header__close,
-.profile-header__close
+.profile-header__close,
+.card-content-header__close
 {
     width: 15px;
     height: 15px;
@@ -201,7 +202,8 @@ cursor: pointer;
 
 .login-header__close:hover,
 .register-header__close:hover,
-.profile-header__close:hover
+.profile-header__close:hover,
+.card-content-header__close:hover
 {
     transform: rotate(180deg);
     cursor: pointer;
@@ -402,6 +404,95 @@ cursor: pointer;
 .profile-card-number__copide
 {
     cursor: pointer;
+}
+
+/* === Buy-card === */
+.modal-buy-card
+{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+
+    opacity: 0;
+    visibility: hidden;
+    background-color: #ffffff;
+    transition: 0.4s;
+}
+
+.buy-card-content__header
+{
+    display: flex;
+    justify-content: end;
+    gap: 103px;
+    padding: 20px 20px;
+
+    color: #ffffff;
+    font-style: normal;
+    font-weight: var(--font-weight-regular);
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    background-color: var(--black-bgc);
+}
+
+.card-content-header__head
+{
+    font-size: var(--font-size-h2);
+}
+
+.buy-card-content__main
+{
+    display: flex;
+    gap: 40px;
+    padding: 30px 40px 40px;
+}
+
+.buy-card-form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-expiration-code
+{
+    width: 45px;
+    margin-right: 5px;
+}
+
+.input-cvc
+{
+    width: 45px;
+}
+
+.buy-card-form__price
+{
+    display: flex;
+    align-items: end;
+    gap: 25px;
+}
+
+.card-form__price-text > span
+{
+    color: var(--black-bgc);
+    font-size: var(--font-size-height);
+    font-style: normal;
+    font-weight: var(--font-weight-bold);
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.buy-card-text
+{
+    color: var(--grey-color);
+    font-size: var(--font-size-medium);
+    font-style: normal;
+    font-weight: var(--font-weight-regular);
+    line-height: 20px;
+    letter-spacing: 2px;
 }
 
 /* ===  Profile-menu ===*/

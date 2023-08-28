@@ -196,7 +196,6 @@ radioInput.forEach((radio, index) =>
 });
 
 
-
 //----------Media (max-width: 768px)-----------------
 
 if (window.matchMedia("(max-width: 768px)").matches) 

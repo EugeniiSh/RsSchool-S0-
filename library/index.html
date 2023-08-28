@@ -16,6 +16,7 @@
     
     
     <div class="modal-window"> 
+        <!-- == Login == -->
         <div class="modal__log-in">
             <div class="modal-wrapper">
                 <div class="login-header">
@@ -45,6 +46,7 @@
             </div>
         </div>
 
+        <!-- == Register == -->
         <div class="modal__register">
             <div class="modal-wrapper">
                 <div class="register-header">
@@ -82,6 +84,7 @@
             </div>
         </div>
 
+        <!-- == Profile == -->
         <div class="modal-profile">
             <div class="modal-wrapper">
                 <div class="modal-profile-content">
@@ -141,6 +144,68 @@
                             <p class="profile-card-number__text">Card number</p>
                             <p class="profile-card-number__value">F00234030</p>
                             <img src="assets/img/small/icon-copy.svg" alt="copy" class="profile-card-number__copide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- == Buy a card == -->
+        <div class="modal-buy-card">
+            <div class="modal-wrapper">
+                <div class="modal-buy-card__content">
+                    <div class="buy-card-content__header">
+                        <h3 class="card-content-header__head">
+                            Buy a library card
+                        </h3>
+                        <img src="assets/img/small/close_btn-white.svg" alt="close" class="card-content-header__close">
+                    </div>
+
+                    <div class="buy-card-content__main">
+                        <div class="card-content-main__buy-card-form">
+                            <form action="#" class="buy-card-form">
+                                <lable class="buy-card-form__label-bank-card-number modal-lable">Bank card number
+                                    <input type="text" name="" id="" class="input-bank-card-number modal-input">
+                                </lable>
+
+                                <lable class="buy-card-form__label-expiration-code modal-lable">Expiration code
+                                    <div class="wrapper__input-expiration-code">
+                                        <input type="text" name="" id="" class="input-expiration-code modal-input">
+                                        <input type="text" name="" id="" class="input-expiration-code modal-input">
+                                    </div>
+                                </lable>
+
+                                <lable class="buy-card-form__label-cvc modal-lable">CVC
+                                    <div class="wrapper__label-cvc">
+                                        <input type="text" name="" id="" class="input-cvc modal-input">
+                                    </div>
+                                </lable>
+
+                                <lable class="buy-card-form__label-cardholder-name modal-lable">Cardholder name
+                                    <input type="text" name="" id="" class="input-cardholder-name modal-input">
+                                </lable>
+
+                                <lable class="buy-card-form__label-postal-code modal-lable">Postal code
+                                    <input type="text" name="" id="" class="input-postal-code modal-input">
+                                </lable>
+
+                                <lable class="buy-card-form__label-city-town modal-lable">City / Town
+                                    <input type="text" name="" id="" class="input-city-town modal-input">
+                                </lable>
+
+                                <div class="buy-card-form__price">
+                                    <input type="button" value="Buy" class="buy-card-form__btn modal-btn">
+                                    <div class="card-form__price-text">
+                                        <span>$ 25.00</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="card-content-main__buy-card-text">
+                            <p class="buy-card-text">
+                                If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -644,7 +709,7 @@
                             </form>
                         </div>
 
-                        <div class="library-cards-block__get-card">
+                        <div class="library-cards-block__get-card no-login" >
                             <h3 class="get-card__header">Get a reader card</h3>
                             <p class="get-card__text">
                                 You will be able to see a reader card after logging into account or you can register a new account
@@ -652,6 +717,16 @@
                             <div class="get-card__buttons">
                                 <button class="card-button__sign-up">Sign Up</button>
                                 <button class="card-button__log-in">Log in</button>
+                            </div>
+                        </div>
+
+                        <div class="library-cards-block__get-card after-login" style="display: none;">
+                            <h3 class="get-card__header">Visit your profile</h3>
+                            <p class="get-card__text">
+                                With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.
+                            </p>
+                            <div class="get-card__buttons">
+                                <button class="card-button__profile">Profile</button>
                             </div>
                         </div>
                     </div>
