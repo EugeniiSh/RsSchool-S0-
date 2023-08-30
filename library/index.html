@@ -21,19 +21,19 @@
             <div class="modal-wrapper">
                 <div class="login-header">
                     <h3 class="login-header__head">Login</h3>
-                    <img src="assets/img/small/close_btn.svg" alt="close" class="login-header__close">
+                    <img src="assets/img/small/close_btn.svg" alt="close" class="login-header__close modal-close">
                 </div>
 
                 <form action="#" class="login-form">
                     <lable class="login-form__label-email modal-lable">E-mail or readers card
-                        <input type="email" name="" id="" class="login-form__input-email modal-input">
+                        <input type="text" name="#" id="inputLogin" class="login-form__input-email modal-input" required>
                     </lable>
 
                     <lable class="login-form__label-password modal-lable">Password
-                        <input type="password" name="" id="" class="login-form__input-password modal-input">
+                        <input type="password" name="#" id="inputLoginPassword" class="login-form__input-password modal-input" required>
                     </lable>
 
-                    <input type="button" value="Log In" class="login-form__btn modal-btn">
+                    <input type="submit" value="Log In" class="login-form__btn modal-btn">
                 </form>
 
                 <div class="login-footer">
@@ -51,27 +51,27 @@
             <div class="modal-wrapper">
                 <div class="register-header">
                     <h3 class="register-header__head">Register</h3>
-                    <img src="assets/img/small/close_btn.svg" alt="close" class="register-header__close">
+                    <img src="assets/img/small/close_btn.svg" alt="close" class="register-header__close modal-close">
                 </div>
 
                 <form action="#" class="register-form">
                     <lable class="register-form__label-first-name modal-lable">First name
-                        <input type="text" name="" id="" class="register-form__input-first-name modal-input">
+                        <input type="text" name="" id="inputFirstName" class="register-form__input-first-name modal-input" required>
                     </lable>
 
                     <lable class="register-form__label-last-name modal-lable">Last name
-                        <input type="text" name="" id="" class="register-form__input-last-name modal-input">
+                        <input type="text" name="" id="inputLastName" class="register-form__input-last-name modal-input" required>
                     </lable>
 
                     <lable class="register-form__label-email modal-lable">E-mail
-                        <input type="email" name="" id="" class="register-form__input-email modal-input">
+                        <input type="email" name="" id="inputEmail" class="register-form__input-email modal-input" required>
                     </lable>
 
                     <lable class="register-form__label-password modal-lable">Password
-                        <input type="password" name="" id="" class="register-form__input-password modal-input">
+                        <input type="password" name="" id="inputRegisterPassword" class="register-form__input-password modal-input" pattern="[A-Za-z0-9]{8,15}" required>
                     </lable>
 
-                    <input type="button" value="Sign Up" class="register-form__btn modal-btn">
+                    <input type="submit" value="Sign Up" class="register-form__btn modal-btn">
                 </form>
 
                 <div class="register-footer">
@@ -103,7 +103,7 @@
                     <div class="profile-content__profile">
                         <div class="content-profile__header">
                             <h3 class="profile-header__head">My profile</h3>
-                            <img src="assets/img/small/close_btn.svg" alt="close" class="profile-header__close">
+                            <img src="assets/img/small/close_btn.svg" alt="close" class="profile-header__close modal-close">
                         </div>
 
                         <div class="content-profile__achievements">
@@ -158,39 +158,39 @@
                         <h3 class="card-content-header__head">
                             Buy a library card
                         </h3>
-                        <img src="assets/img/small/close_btn-white.svg" alt="close" class="card-content-header__close">
+                        <img src="assets/img/small/close_btn-white.svg" alt="close" class="card-content-header__close modal-close">
                     </div>
 
                     <div class="buy-card-content__main">
                         <div class="card-content-main__buy-card-form">
                             <form action="#" class="buy-card-form">
                                 <lable class="buy-card-form__label-bank-card-number modal-lable">Bank card number
-                                    <input type="text" name="" id="" class="input-bank-card-number modal-input">
+                                    <input type="text" name="" id="inputBankCardNumder" class="input-bank-card-number modal-input">
                                 </lable>
 
                                 <lable class="buy-card-form__label-expiration-code modal-lable">Expiration code
                                     <div class="wrapper__input-expiration-code">
-                                        <input type="text" name="" id="" class="input-expiration-code modal-input">
-                                        <input type="text" name="" id="" class="input-expiration-code modal-input">
+                                        <input type="text" name="" id="inputExpCodFirst" class="input-expiration-code modal-input">
+                                        <input type="text" name="" id="inputExpCodSecond" class="input-expiration-code modal-input">
                                     </div>
                                 </lable>
 
                                 <lable class="buy-card-form__label-cvc modal-lable">CVC
                                     <div class="wrapper__label-cvc">
-                                        <input type="text" name="" id="" class="input-cvc modal-input">
+                                        <input type="text" name="" id="inputCvc" class="input-cvc modal-input">
                                     </div>
                                 </lable>
 
                                 <lable class="buy-card-form__label-cardholder-name modal-lable">Cardholder name
-                                    <input type="text" name="" id="" class="input-cardholder-name modal-input">
+                                    <input type="text" name="" id="inputCardholderName" class="input-cardholder-name modal-input">
                                 </lable>
 
                                 <lable class="buy-card-form__label-postal-code modal-lable">Postal code
-                                    <input type="text" name="" id="" class="input-postal-code modal-input">
+                                    <input type="text" name="" id="InputPostalCode" class="input-postal-code modal-input">
                                 </lable>
 
                                 <lable class="buy-card-form__label-city-town modal-lable">City / Town
-                                    <input type="text" name="" id="" class="input-city-town modal-input">
+                                    <input type="text" name="" id="inputCity" class="input-city-town modal-input">
                                 </lable>
 
                                 <div class="buy-card-form__price">
@@ -213,6 +213,7 @@
         </div>
     </div>
     <!-- МОДАЛЬНЫЕ ОКНА -->
+
     <header>
         <section class="heading">
             <div class="wrapper">
@@ -235,7 +236,9 @@
                             <div class="modal-menu__profile-no-auth">
                                 <p class="profile-no-auth__header">Profile</p>
                                 <button type="button" class="profile-no-auth__log-in">Log In</button>
+                                <button type="button" class="profile-no-auth__my-profile">My profile</button>
                                 <button type="button" class="profile-no-auth__register">Register</button>
+                                <button type="button" class="profile-no-auth__log-out">Log Out</button>
                             </div>
                             <!-- модальное окно -->
                         </div>
@@ -789,5 +792,6 @@
     </footer>
     <script src="js/index.js"></script>
     <script src="js/indexModal.js"></script>
+    <script src="js/indexLocal.js"></script>
 </body>
 </html>

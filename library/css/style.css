@@ -150,6 +150,12 @@ border-color: var(--gold-color);
 cursor: pointer;
 }
 
+.active-modal
+{
+    opacity: 1 !important;
+    visibility: visible !important; 
+}
+
 /* ===  Log-In ===*/
 /* ===  Register ===*/
 .modal__log-in,
