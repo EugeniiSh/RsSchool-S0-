@@ -303,6 +303,7 @@ cursor: pointer;
 .personal-block__name
 {
     padding: 5px 15px;
+    text-align: center;
     font-size: var(--font-size-height);
     line-height: 20px;
     background-color: var(--white-color);
@@ -410,6 +411,12 @@ cursor: pointer;
 .profile-card-number__copide
 {
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.copide-active
+{
+    transform: scale(2, 2);
 }
 
 /* === Buy-card === */
@@ -630,6 +637,27 @@ cursor: pointer;
     cursor: pointer;
 }
 
+.heading__login-profile
+{
+    display: none;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    padding: 4px 0;
+
+    text-align: center;
+    color: var(--gold-color);
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.active__heading-login-profile
+{
+    display: block;
+}
+
 .heading-login img
 {
     transition: 0.3s;
@@ -641,7 +669,11 @@ cursor: pointer;
     box-shadow: 0 0 25px var(--white-color);
 }
 
-
+.heading-login:hover img
+{
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--white-color);
+}
 
 /* Секция welcome ////////////////////////////*/
 

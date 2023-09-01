@@ -68,7 +68,7 @@
                     </lable>
 
                     <lable class="register-form__label-password modal-lable">Password
-                        <input type="password" name="" id="inputRegisterPassword" class="register-form__input-password modal-input" pattern="[A-Za-z0-9]{8,15}" required>
+                        <input type="password" name="" id="inputRegisterPassword" class="register-form__input-password modal-input" pattern="[A-Za-z0-9]{8,15}" minlength="8" required>
                     </lable>
 
                     <input type="submit" value="Sign Up" class="register-form__btn modal-btn">
@@ -110,19 +110,19 @@
                             <div class="profile-achievements__visits">
                                 <p class="achievement-head">Visits</p>
                                 <img src="assets/img/small/visits.svg" alt="visits" class="achievement-image">
-                                <p class="achievement-value">23</p>
+                                <p class="achievement-value-visits">23</p>
                             </div>
 
                             <div class="profile-achievements__bonuses">
                                 <p class="achievement-head">Bonuses</p>
                                 <img src="assets/img/small/bonuses.svg" alt="bonuses" class="achievement-image">
-                                <p class="achievement-value">1240</p>
+                                <p class="achievement-value-bonuses">1240</p>
                             </div>
 
                             <div class="profile-achievements__books">
                                 <p class="achievement-head">Books</p>
                                 <img src="assets/img/small/books.svg" alt="books" class="achievement-image">
-                                <p class="achievement-value">2</p>
+                                <p class="achievement-value-books">2</p>
                             </div>
                         </div>
 
@@ -231,6 +231,7 @@
                         </nav>
 
                         <div class="heading-login">
+                            <div class="heading__login-profile">JD</div>
                             <img src="assets/img/small/subtract.svg" alt="login" class="login-img">
                             <!-- модальное окно -->
                             <div class="modal-menu__profile-no-auth">
