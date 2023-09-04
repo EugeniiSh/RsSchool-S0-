@@ -165,36 +165,36 @@
                         <div class="card-content-main__buy-card-form">
                             <form action="#" class="buy-card-form">
                                 <lable class="buy-card-form__label-bank-card-number modal-lable">Bank card number
-                                    <input type="text" name="" id="inputBankCardNumder" class="input-bank-card-number modal-input">
+                                    <input type="text" name="" id="inputBankCardNumder" class="input-bank-card-number modal-input" title="16 символов, только цифры" pattern="[0-9]{16,16}" required>
                                 </lable>
 
                                 <lable class="buy-card-form__label-expiration-code modal-lable">Expiration code
                                     <div class="wrapper__input-expiration-code">
-                                        <input type="text" name="" id="inputExpCodFirst" class="input-expiration-code modal-input">
-                                        <input type="text" name="" id="inputExpCodSecond" class="input-expiration-code modal-input">
+                                        <input type="text" name="" id="inputExpCodFirst" class="input-expiration-code modal-input" title="2 символа, только цифры" pattern="[0-9]{2,2}" required>
+                                        <input type="text" name="" id="inputExpCodSecond" class="input-expiration-code modal-input" title="2 символа, только цифры" pattern="[0-9]{2,2}" required>
                                     </div>
                                 </lable>
 
                                 <lable class="buy-card-form__label-cvc modal-lable">CVC
                                     <div class="wrapper__label-cvc">
-                                        <input type="text" name="" id="inputCvc" class="input-cvc modal-input">
+                                        <input type="text" name="" id="inputCvc" class="input-cvc modal-input" title="3 символа, только цифры" pattern="[0-9]{3,3}" required>
                                     </div>
                                 </lable>
 
                                 <lable class="buy-card-form__label-cardholder-name modal-lable">Cardholder name
-                                    <input type="text" name="" id="inputCardholderName" class="input-cardholder-name modal-input">
+                                    <input type="text" name="" id="inputCardholderName" class="input-cardholder-name modal-input" title="максиму 15 символов, только латинские буквы" pattern="[a-zA-Z]{1,15}" required>
                                 </lable>
 
                                 <lable class="buy-card-form__label-postal-code modal-lable">Postal code
-                                    <input type="text" name="" id="InputPostalCode" class="input-postal-code modal-input">
+                                    <input type="text" name="" id="InputPostalCode" class="input-postal-code modal-input" title="максиму 6 символов, только цифры" pattern="[0-9]{1,6}" required>
                                 </lable>
 
                                 <lable class="buy-card-form__label-city-town modal-lable">City / Town
-                                    <input type="text" name="" id="inputCity" class="input-city-town modal-input">
+                                    <input type="text" name="" id="inputCity" class="input-city-town modal-input" title="максиму 15 символов, только латинские буквы" pattern="[a-zA-Z]{1,15}" required>
                                 </lable>
 
                                 <div class="buy-card-form__price">
-                                    <input type="button" value="Buy" class="buy-card-form__btn modal-btn">
+                                    <input type="submit" name="subm" value="Buy" class="buy-card-form__btn modal-btn disabled-btn" disabled>
                                     <div class="card-form__price-text">
                                         <span>$ 25.00</span>
                                     </div>

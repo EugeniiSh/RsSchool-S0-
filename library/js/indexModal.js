@@ -12,6 +12,8 @@ const modalLogin = document.querySelector('.modal__log-in');
 const modalRegister = document.querySelector('.modal__register');
 const modalProfile = document.querySelector('.modal-profile');
 const modalBuyCard = document.querySelector('.modal-buy-card');
+// --- Кнопки из Favorites ---
+const favoritesBuyBook = document.querySelectorAll('.block-item__book-buy');
 // --- Кнопки из Digital Library Cards ---
 const digitalLogin = document.querySelector('.card-button__log-in');
 const digitaSignUp = document.querySelector('.card-button__sign-up');
@@ -195,6 +197,101 @@ digitaProfile.addEventListener('click',
         modalProfile.classList.add('active-modal');
     }
 );
+// --- ----- ---
+
+// +++ Buy Library Card +++
+// --- Вызов ---
+// console.log((localStorage.getItem('loginStatus')));
+for (let elem of favoritesBuyBook)
+{
+    elem.addEventListener('click',
+        function ()
+        {
+            let loginUserInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+            if ((localStorage.getItem('loginStatus') === 'true') 
+            && (loginUserInfo.buyCard === 'false'))
+            {
+                modalWindow.classList.add('active-modal');
+                modalBuyCard.classList.add('active-modal');
+            }
+
+            if ((localStorage.getItem('loginStatus') === 'false')
+            || (localStorage.getItem('loginStatus') === null))
+            {
+                modalWindow.classList.add('active-modal');
+                modalLogin.classList.add('active-modal');
+                // --очистка строк ввода--
+                const LoginInputs = modalLogin.querySelectorAll('.modal-input');
+                for(let elem of LoginInputs)
+                {
+                    elem.value = '';
+                }
+            }
+
+            buyBook(loginUserInfo, elem);
+            // elem.parentNode.lastElementChild.classList.add('disabled-btn__book-buy');
+        }
+    );
+}
+
+// -- Проверка валидности --
+const buyCardForm = document.querySelector('.buy-card-form');
+const inputsBuyCardForm = buyCardForm.querySelectorAll('.modal-input');
+
+for (elem of inputsBuyCardForm)
+{
+    elem.addEventListener('input',
+        function ()
+        {
+            if (buyCardForm.checkValidity())
+            {
+                // buyCardForm.subm.removeAttribute('disabled');
+                buyCardForm.subm.disabled = false;
+                buyCardForm.subm.classList.remove('disabled-btn');
+            }
+            else
+            {
+                buyCardForm.subm.disabled = true;
+                buyCardForm.subm.classList.add('disabled-btn');
+            }
+        }
+    );
+};
+
+// -- Покупка и закрытие --
+buyCardForm.subm.addEventListener('click',
+    function ()
+    {
+        let loginUserInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+        modalWindow.classList.remove('active-modal');
+        modalBuyCard.classList.remove('active-modal');
+        loginUserInfo.buyCard = 'true';
+        localStorage.setItem('userInfo', JSON.stringify(loginUserInfo));
+    }
+);
+
+// console.log(document.querySelector('.buy-card-form').subm);
+
+// document.querySelector('.buy-card-form').subm.onclick = (event) =>
+// {
+//     console.log(event);
+//     console.log(document.querySelector('.buy-card-form').checkValidity());
+//     return false;
+//     console.log(document.querySelector('.buy-card-form').subm);
+// }
+
+// --- Закрытие ---
+window.addEventListener('click', (event) => 
+{
+    if((event.target == document.querySelector('.card-content-header__close')) ||
+    (event.target == modalWindow))
+    {
+        modalWindow.classList.remove('active-modal');
+        modalBuyCard.classList.remove('active-modal')
+    } 
+});
 // --- ----- ---
 
 // +++ Log Out +++

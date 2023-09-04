@@ -13,6 +13,9 @@ const registerFormBtn = document.querySelector('.register-form__btn');
 const copyCardNumber = document.querySelector('.profile-card-number__copide');
 
 console.log(JSON.parse(localStorage.getItem('userInfo')));
+// let loginUserInfo = JSON.parse(localStorage.getItem('userInfo'));
+// loginUserInfo.buyCard = 'false';
+// localStorage.setItem('userInfo', JSON.stringify(loginUserInfo));
 
 function loginUser ()
 {
@@ -54,9 +57,13 @@ function registerNewUser ()
         newUser.password = passwordRegInput.value;
         newUser.cardNumber = Math.random().toString(16).slice(2,11).toUpperCase();
         newUser.visits = 1;
-        newUser.books = {};
-        newUser.books.rentBooks = [];
-        newUser.books.countBooks = newUser.books.rentBooks.length;
+        newUser.buyCard = 'false';
+        newUser.books = [];
+        newUser.rentBooks = 0;
+        // getRentBooks ()
+        // {
+        //     newUser.books.length
+        // };
 
         localStorage.setItem('loginStatus', 'true');
         localStorage.setItem('userInfo', JSON.stringify(newUser));
@@ -119,6 +126,24 @@ copyCardNumber.addEventListener('click',
         }
     }
 );
+
+// --- Покупка книг ---
+function buyBook (userInfo, elem_btn)
+{
+    if ((localStorage.getItem('loginStatus') === 'true')
+    && (userInfo.buyCard === 'true'))
+    {
+        console.log('rt');
+        userInfo.books.push({bookName: elem_btn.parentNode.childNodes[3].textContent, bookAutor: elem_btn.parentNode.childNodes[5].textContent});
+        userInfo.rentBooks = userInfo.books.length;
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+        // console.log('rt2');
+        elem_btn.classList.add('disabled-btn__book-buy');
+        elem_btn.textContent = 'Own';
+        // location.reload();
+    }
+};
 
 
 loginFormBtn.onclick = loginUser;

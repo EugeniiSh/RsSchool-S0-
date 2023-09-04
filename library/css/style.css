@@ -426,7 +426,7 @@ cursor: pointer;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    width: 650px;
+    width: 640px;
 
     opacity: 0;
     visibility: hidden;
@@ -506,6 +506,18 @@ cursor: pointer;
     font-weight: var(--font-weight-regular);
     line-height: 20px;
     letter-spacing: 2px;
+}
+
+.disabled-btn
+{
+    opacity: 0.5;
+}
+
+.disabled-btn:hover
+{
+    background-color: var(--white-color);
+    border-color: var(--black-color);
+    cursor: auto;
 }
 
 /* ===  Profile-menu ===*/
@@ -909,7 +921,6 @@ cursor: pointer;
     grid-template-rows: 255px 300px 40px 255px 300px;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(1) */
 .title-book,
 .title-body,
 .title-crude,
@@ -919,7 +930,6 @@ cursor: pointer;
     grid-row: 1/3;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(1) + .block-item__book-img */
 .img-book,
 .img-body,
 .img-crude,
@@ -930,7 +940,6 @@ cursor: pointer;
     z-index: 1;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(3) */
 .title-cackle,
 .title-carry,
 .title-surfing,
@@ -940,7 +949,6 @@ cursor: pointer;
     grid-row: 1/3;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(3) + .block-item__book-img */
 .img-cakle,
 .img-carry,
 .img-surfing,
@@ -951,7 +959,6 @@ cursor: pointer;
     z-index: 1;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(5) */
 .title-dante,
 .title-days,
 .title-octopus,
@@ -961,7 +968,6 @@ cursor: pointer;
     grid-row: 4/6;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(5) + .block-item__book-img */
 .img-dante,
 .img-days,
 .img-octopus,
@@ -972,7 +978,6 @@ cursor: pointer;
     z-index: 1;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(7) */
 .title-queen,
 .title-dominicana,
 .title-shark,
@@ -982,7 +987,6 @@ cursor: pointer;
     grid-row: 4/6;
 }
 
-/* .favorites__book-blocks > div:nth-of-type(7) + .block-item__book-img */
 .img-queen,
 .img-dominicana,
 .img-shark,
@@ -1089,6 +1093,15 @@ cursor: pointer;
 {
     opacity: 1;
     z-index: 2;
+}
+
+.disabled-btn__book-buy
+{
+    opacity: 0.7;
+    color: var(--gold-color);
+    background-color: var(--white-color);
+    border-color: var(--gold-color);
+    pointer-events: none;
 }
 
 /* Секция coffee shop ////////////////////////////*/
