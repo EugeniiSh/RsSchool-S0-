@@ -14,12 +14,14 @@ const modalProfile = document.querySelector('.modal-profile');
 const modalBuyCard = document.querySelector('.modal-buy-card');
 // --- Кнопки из Favorites ---
 const favoritesBuyBook = document.querySelectorAll('.block-item__book-buy');
-// --- Кнопки из Digital Library Cards ---
+// --- Digital Library Cards и кнопки из него ---
+const digitalLibraryCards = document.querySelector('.library-cards');
 const digitalLogin = document.querySelector('.card-button__log-in');
 const digitaSignUp = document.querySelector('.card-button__sign-up');
 const digitaProfile = document.querySelector('.card-button__profile');
+const digitaInputBtn = document.querySelector('.input-block__btn');
 
-// localStorage.setItem('loginStatus', 'false');
+
 
 // +++ Drop menu profile +++
 // --- Вызов ---
@@ -197,11 +199,58 @@ digitaProfile.addEventListener('click',
         modalProfile.classList.add('active-modal');
     }
 );
+// --- Check the card ---
+digitaInputBtn.onclick = (event) =>
+{
+    const loginUserInfo = JSON.parse(localStorage.getItem('userInfo'));
+    const inputBlockText = digitalLibraryCards.querySelector('.input-block__text');
+    const inputBlockNumber = digitalLibraryCards.querySelector('.input-block__number');
+
+    if ((inputBlockText.value.replaceAll(' ', '') === (loginUserInfo.firsName + loginUserInfo.lastName))
+    && (inputBlockNumber.value === loginUserInfo.cardNumber))
+    {
+        const cloneAchivments = modalProfile.querySelector('.content-profile__achievements').cloneNode(true);
+        cloneAchivments.classList.add('clone__achivments');
+
+        for (let elem of cloneAchivments.querySelectorAll('.achievement-head'))
+        {
+            elem.style = 'font-size: 15px;'; 
+        }
+
+        cloneAchivments.querySelector('.achievement-value-visits').textContent = loginUserInfo.visits;
+        cloneAchivments.querySelector('.achievement-value-books').textContent = loginUserInfo.rentBooks;
+  
+        digitalLibraryCards.querySelector('.form-input-block').after(cloneAchivments);
+        digitalLibraryCards.querySelector('.input-block__btn').classList.add('disable__library-cards-block');
+        digitalLibraryCards.querySelector('.find-card__form').classList.add('find-card__form-login');
+
+        event.preventDefault();
+
+        setTimeout(() => cloneAchivments.remove(), 10000);
+        setTimeout(() => 
+        {
+            digitalLibraryCards.querySelector('.input-block__btn').classList.remove('disable__library-cards-block');
+            digitalLibraryCards.querySelector('.find-card__form').classList.remove('find-card__form-login');
+
+            inputBlockText.value = '';
+            inputBlockNumber.value = '';
+        }, 
+        10000);
+        
+    }
+    else
+    {
+        event.preventDefault();
+        alert('Library card is not found');
+    }
+    
+}
+    
+
 // --- ----- ---
 
 // +++ Buy Library Card +++
 // --- Вызов ---
-// console.log((localStorage.getItem('loginStatus')));
 for (let elem of favoritesBuyBook)
 {
     elem.addEventListener('click',
@@ -230,7 +279,6 @@ for (let elem of favoritesBuyBook)
             }
 
             buyBook(loginUserInfo, elem);
-            // elem.parentNode.lastElementChild.classList.add('disabled-btn__book-buy');
         }
     );
 }
@@ -272,16 +320,6 @@ buyCardForm.subm.addEventListener('click',
     }
 );
 
-// console.log(document.querySelector('.buy-card-form').subm);
-
-// document.querySelector('.buy-card-form').subm.onclick = (event) =>
-// {
-//     console.log(event);
-//     console.log(document.querySelector('.buy-card-form').checkValidity());
-//     return false;
-//     console.log(document.querySelector('.buy-card-form').subm);
-// }
-
 // --- Закрытие ---
 window.addEventListener('click', (event) => 
 {
@@ -301,7 +339,7 @@ dropMenuProfileLogOut.addEventListener('click',
     {
         localStorage.setItem('loginStatus', 'false');
 
-        getIconProfile ()
+        updateShowProfileInfo ()
         location.reload();
     }
 );

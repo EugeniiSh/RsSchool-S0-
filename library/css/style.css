@@ -303,6 +303,8 @@ cursor: pointer;
 .personal-block__name
 {
     padding: 5px 15px;
+    max-width: 160px;
+    overflow-x: auto;
     text-align: center;
     font-size: var(--font-size-height);
     line-height: 20px;
@@ -378,6 +380,13 @@ cursor: pointer;
     font-size: 25px;
     font-weight: var(--font-weight-regular);
     line-height: 20px;
+}
+
+.profile-rented__list
+{
+    max-height: 200px;
+    overflow: hidden;
+    overflow: auto;
 }
 
 .profile-rented__list > li
@@ -1075,14 +1084,6 @@ cursor: pointer;
     cursor: pointer;
 }
 
-/* .title-queen .block-item__book-buy
-{
-    color: var(--gold-color);
-    border: 2px solid var(--gold-color);
-    pointer-events: none;
-    cursor: default;
-} */
-
 .block-item__book-img
 {
     opacity: 0;
@@ -1406,6 +1407,33 @@ cursor: pointer;
 {
     padding: 9px 20px;
 }
+
+.disabled__form-input-block
+{
+    pointer-events: none;
+}
+
+.disabled__form-input-block::placeholder
+{
+    color: var(--gold-color);
+}
+
+.disable__library-cards-block
+{
+    display: none;
+}
+
+.clone__achivments
+{
+    margin: 0;
+    font-size: var(--font-size-medium); 
+}
+
+.find-card__form-login
+{
+    padding-bottom: 16px;
+}
+
 
 /* Секция footer-library ////////////////////////////*/
 

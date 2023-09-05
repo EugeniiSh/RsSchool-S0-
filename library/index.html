@@ -129,14 +129,14 @@
                         <div class="content-profile__rented">
                             <p class="profile-rented__head">Rented books</p>
                             <ul class="profile-rented__list">
-                                <li class="rented-list__item">
+                                <!-- <li class="rented-list__item">
                                     <span class="list-item__book-name">The Last Queen</span><span>, </span>
                                     <span class="list-item__book-autor">Clive Irving</span>
                                 </li>
                                 <li class="rented-list__item">
                                     <span class="list-item__book-name">Dominicana</span><span>, </span>
                                     <span class="list-item__book-autor">Angie Cruz</span>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
 
@@ -706,8 +706,8 @@
                             <form action="#" class="find-card__form">
                                 <div class="form-input-block">
                                     <p class="input-block__label">Brooklyn Public Library</p>
-                                    <input type="text" name="inputBlockText" class="input-block__text" pattern="[A-Za-zА-Яа-яЁё\s]+" placeholder="Reader's name">
-                                    <input type="text" name="inputBlockNumber" class="input-block__number" pattern="[0-9\-]+" placeholder="Card number">
+                                    <input type="text" name="inputBlockText" class="input-block__text" pattern="[A-Za-zА-Яа-яЁё0-9\s]+" placeholder="Reader's name">
+                                    <input type="text" name="inputBlockNumber" class="input-block__number" pattern="[A-Za-zА-Яа-яЁё0-9\-]+" placeholder="Card number">
                                 </div>
                                 <input type="submit" class="input-block__btn" value="Check the card">
                             </form>
@@ -724,7 +724,7 @@
                             </div>
                         </div>
 
-                        <div class="library-cards-block__get-card after-login" style="display: none;">
+                        <div class="library-cards-block__get-card after-login disable__library-cards-block">
                             <h3 class="get-card__header">Visit your profile</h3>
                             <p class="get-card__text">
                                 With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.
