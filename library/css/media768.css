@@ -141,6 +141,11 @@
     }
 
     /* Секция about ////////////////////////////*/
+    .about-content
+    {
+        position: relative;
+    }
+
     .about-text
     {
         text-align: center;
@@ -148,12 +153,18 @@
         margin-bottom: 20px;
     }
 
+    .about-images__wrapper
+    {
+        width: 450px;
+        overflow: hidden;
+    }
+
     .about-images__content
     {
         margin-bottom: 15px;
     }
 
-    .about-images__content > div:nth-child(1)
+    /* .about-images__content > div:nth-child(1)
     {
         position: relative;
     }
@@ -182,7 +193,7 @@
     .about-images__content > div:nth-child(3)
     {
         display: none;
-    }
+    } */
 
     .pagination-content > div:nth-of-type(4),
     .pagination-content > div:nth-of-type(5)
@@ -190,10 +201,46 @@
         display: flex;
     }
 
+    .about-image__prev,
+    .about-image__next
+    {
+        display: flex;
+        position: absolute;
+        background-color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
+
+    .about-image__prev
+    {
+        left: 65px;
+        top: 510px;
+    }
+
+    .about-image__next
+    {
+        right: 65px;
+        top: 510px;
+    }
+
+    .arrow-disabled
+    {
+        opacity: 0.5;
+        cursor: auto;
+    }
+
     /* Секция favorites ////////////////////////////*/
     .favorites-content
     {
         padding: 20px 0 40px;
+    }
+
+    .favorites__radio-select
+    {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .radio-select__bloks
@@ -208,56 +255,88 @@
         grid-template-rows: 255px 300px 40px 255px 300px 40px 255px 300px 40px 255px 300px;
     }
 
-    .favorites__book-blocks > div:nth-of-type(1)
+    /* .favorites__book-blocks > div:nth-of-type(1) */
+    .title-book,
+    .title-body,
+    .title-crude,
+    .title-casual
     {
         grid-column: 2/4;
         grid-row: 1/3;
     }
 
-    .favorites__book-blocks > div:nth-of-type(1) + .block-item__book-img
+    /* .favorites__book-blocks > div:nth-of-type(1) + .block-item__book-img */
+    .img-book,
+    .img-body,
+    .img-crude,
+    .img-casual
     {
         grid-column: 3/5;
         grid-row: 2/3;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
-    .favorites__book-blocks > div:nth-of-type(3)
+    /* .favorites__book-blocks > div:nth-of-type(3) */
+    .title-cackle,
+    .title-carry,
+    .title-surfing,
+    .title-fire
     {
         grid-column: 2/4;
         grid-row: 4/6;
     }
 
-    .favorites__book-blocks > div:nth-of-type(3) + .block-item__book-img
+    /* .favorites__book-blocks > div:nth-of-type(3) + .block-item__book-img */
+    .img-cakle,
+    .img-carry,
+    .img-surfing,
+    .img-fire
     {
         grid-column: 3/5;
         grid-row: 5/6;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
-    .favorites__book-blocks > div:nth-of-type(5)
+    /* .favorites__book-blocks > div:nth-of-type(5) */
+    .title-dante,
+    .title-days,
+    .title-octopus,
+    .title-rickey
     {
         grid-column: 2/4;
         grid-row: 7/9;
     }
 
-    .favorites__book-blocks > div:nth-of-type(5) + .block-item__book-img
+    /* .favorites__book-blocks > div:nth-of-type(5) + .block-item__book-img */
+    .img-dante,
+    .img-days,
+    .img-octopus,
+    .img-rickey
     {
         grid-column: 3/5;
         grid-row: 8/9;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
-    .favorites__book-blocks > div:nth-of-type(7)
+    /* .favorites__book-blocks > div:nth-of-type(7) */
+    .title-queen,
+    .title-dominicana,
+    .title-shark,
+    .title-slug
     {
         grid-column: 2/4;
         grid-row: 10/12;
     }
 
-    .favorites__book-blocks > div:nth-of-type(7) + .block-item__book-img
+    /* .favorites__book-blocks > div:nth-of-type(7) + .block-item__book-img */
+    .img-queen,
+    .img-dominicana,
+    .img-shark,
+    .img-slug
     {
         grid-column: 3/5;
         grid-row: 11/12;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
     /* Секция coffee shop ////////////////////////////*/
