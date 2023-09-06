@@ -12,6 +12,208 @@
     <link rel="stylesheet" href="css/media768.css">
 </head>
 <body>
+    <!-- МОДАЛЬНЫЕ ОКНА -->
+    
+    
+    <div class="modal-window"> 
+        <!-- == Login == -->
+        <div class="modal__log-in">
+            <div class="modal-wrapper">
+                <div class="login-header">
+                    <h3 class="login-header__head">Login</h3>
+                    <img src="assets/img/small/close_btn.svg" alt="close" class="login-header__close modal-close">
+                </div>
+
+                <form action="#" class="login-form">
+                    <lable class="login-form__label-email modal-lable">E-mail or readers card
+                        <input type="text" name="#" id="inputLogin" class="login-form__input-email modal-input" required>
+                    </lable>
+
+                    <lable class="login-form__label-password modal-lable">Password
+                        <input type="password" name="#" id="inputLoginPassword" class="login-form__input-password modal-input" required>
+                    </lable>
+
+                    <input type="submit" value="Log In" class="login-form__btn modal-btn">
+                </form>
+
+                <div class="login-footer">
+                    <p class="login-footer__text">
+                        Don’t have an account?
+                    </p>
+
+                    <a href="#" class="login-footer__link">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- == Register == -->
+        <div class="modal__register">
+            <div class="modal-wrapper">
+                <div class="register-header">
+                    <h3 class="register-header__head">Register</h3>
+                    <img src="assets/img/small/close_btn.svg" alt="close" class="register-header__close modal-close">
+                </div>
+
+                <form action="#" class="register-form">
+                    <lable class="register-form__label-first-name modal-lable">First name
+                        <input type="text" name="" id="inputFirstName" class="register-form__input-first-name modal-input" required>
+                    </lable>
+
+                    <lable class="register-form__label-last-name modal-lable">Last name
+                        <input type="text" name="" id="inputLastName" class="register-form__input-last-name modal-input" required>
+                    </lable>
+
+                    <lable class="register-form__label-email modal-lable">E-mail
+                        <input type="email" name="" id="inputEmail" class="register-form__input-email modal-input" required>
+                    </lable>
+
+                    <lable class="register-form__label-password modal-lable">Password
+                        <input type="password" name="" id="inputRegisterPassword" class="register-form__input-password modal-input" pattern="[A-Za-z0-9]{8,15}" minlength="8" title="Минимум 8 символов" required>
+                    </lable>
+
+                    <input type="submit" value="Sign Up" class="register-form__btn modal-btn">
+                </form>
+
+                <div class="register-footer">
+                    <p class="register-footer__text">
+                        Already have an account?
+                    </p>
+
+                    <a href="#" class="register-footer__link">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- == Profile == -->
+        <div class="modal-profile">
+            <div class="modal-wrapper">
+                <div class="modal-profile-content">
+                    <div class="profile-content__personal">
+                        <div class="content-personal__block">
+                            <div class="personal-block__avatar">
+                                <p class="block-avatar">JD</p>
+                            </div>
+
+                            <div class="personal-block__name">
+                                <p class="block-name">John Doe</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-content__profile">
+                        <div class="content-profile__header">
+                            <h3 class="profile-header__head">My profile</h3>
+                            <img src="assets/img/small/close_btn.svg" alt="close" class="profile-header__close modal-close">
+                        </div>
+
+                        <div class="content-profile__achievements">
+                            <div class="profile-achievements__visits">
+                                <p class="achievement-head">Visits</p>
+                                <img src="assets/img/small/visits.svg" alt="visits" class="achievement-image">
+                                <p class="achievement-value-visits">23</p>
+                            </div>
+
+                            <div class="profile-achievements__bonuses">
+                                <p class="achievement-head">Bonuses</p>
+                                <img src="assets/img/small/bonuses.svg" alt="bonuses" class="achievement-image">
+                                <p class="achievement-value-bonuses">1240</p>
+                            </div>
+
+                            <div class="profile-achievements__books">
+                                <p class="achievement-head">Books</p>
+                                <img src="assets/img/small/books.svg" alt="books" class="achievement-image">
+                                <p class="achievement-value-books">2</p>
+                            </div>
+                        </div>
+
+                        <div class="content-profile__rented">
+                            <p class="profile-rented__head">Rented books</p>
+                            <ul class="profile-rented__list">
+                                <!-- <li class="rented-list__item">
+                                    <span class="list-item__book-name">The Last Queen</span><span>, </span>
+                                    <span class="list-item__book-autor">Clive Irving</span>
+                                </li>
+                                <li class="rented-list__item">
+                                    <span class="list-item__book-name">Dominicana</span><span>, </span>
+                                    <span class="list-item__book-autor">Angie Cruz</span>
+                                </li> -->
+                            </ul>
+                        </div>
+
+                        <div class="content-profile__card-number">
+                            <p class="profile-card-number__text">Card number</p>
+                            <p class="profile-card-number__value">F00234030</p>
+                            <img src="assets/img/small/icon-copy.svg" alt="copy" class="profile-card-number__copide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- == Buy a card == -->
+        <div class="modal-buy-card">
+            <div class="modal-wrapper">
+                <div class="modal-buy-card__content">
+                    <div class="buy-card-content__header">
+                        <h3 class="card-content-header__head">
+                            Buy a library card
+                        </h3>
+                        <img src="assets/img/small/close_btn-white.svg" alt="close" class="card-content-header__close modal-close">
+                    </div>
+
+                    <div class="buy-card-content__main">
+                        <div class="card-content-main__buy-card-form">
+                            <form action="#" class="buy-card-form">
+                                <lable class="buy-card-form__label-bank-card-number modal-lable">Bank card number
+                                    <input type="text" name="" id="inputBankCardNumder" class="input-bank-card-number modal-input" title="16 символов, только цифры" pattern="[0-9]{16,16}" required>
+                                </lable>
+
+                                <lable class="buy-card-form__label-expiration-code modal-lable">Expiration code
+                                    <div class="wrapper__input-expiration-code">
+                                        <input type="text" name="" id="inputExpCodFirst" class="input-expiration-code modal-input" title="2 символа, только цифры" pattern="[0-9]{2,2}" required>
+                                        <input type="text" name="" id="inputExpCodSecond" class="input-expiration-code modal-input" title="2 символа, только цифры" pattern="[0-9]{2,2}" required>
+                                    </div>
+                                </lable>
+
+                                <lable class="buy-card-form__label-cvc modal-lable">CVC
+                                    <div class="wrapper__label-cvc">
+                                        <input type="text" name="" id="inputCvc" class="input-cvc modal-input" title="3 символа, только цифры" pattern="[0-9]{3,3}" required>
+                                    </div>
+                                </lable>
+
+                                <lable class="buy-card-form__label-cardholder-name modal-lable">Cardholder name
+                                    <input type="text" name="" id="inputCardholderName" class="input-cardholder-name modal-input" title="максиму 15 символов, только латинские буквы" pattern="[a-zA-Z]{1,15}" required>
+                                </lable>
+
+                                <lable class="buy-card-form__label-postal-code modal-lable">Postal code
+                                    <input type="text" name="" id="InputPostalCode" class="input-postal-code modal-input" title="максиму 6 символов, только цифры" pattern="[0-9]{1,6}" required>
+                                </lable>
+
+                                <lable class="buy-card-form__label-city-town modal-lable">City / Town
+                                    <input type="text" name="" id="inputCity" class="input-city-town modal-input" title="максиму 15 символов, только латинские буквы" pattern="[a-zA-Z]{1,15}" required>
+                                </lable>
+
+                                <div class="buy-card-form__price">
+                                    <input type="submit" name="subm" value="Buy" class="buy-card-form__btn modal-btn disabled-btn" disabled>
+                                    <div class="card-form__price-text">
+                                        <span>$ 25.00</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="card-content-main__buy-card-text">
+                            <p class="buy-card-text">
+                                If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- МОДАЛЬНЫЕ ОКНА -->
+
     <header>
         <section class="heading">
             <div class="wrapper">
@@ -29,7 +231,17 @@
                         </nav>
 
                         <div class="heading-login">
+                            <div class="heading__login-profile">JD</div>
                             <img src="assets/img/small/subtract.svg" alt="login" class="login-img">
+                            <!-- модальное окно -->
+                            <div class="modal-menu__profile-no-auth">
+                                <p class="profile-no-auth__header">Profile</p>
+                                <button type="button" class="profile-no-auth__log-in">Log In</button>
+                                <button type="button" class="profile-no-auth__my-profile">My profile</button>
+                                <button type="button" class="profile-no-auth__register">Register</button>
+                                <button type="button" class="profile-no-auth__log-out">Log Out</button>
+                            </div>
+                            <!-- модальное окно -->
                         </div>
                         
                         <div class="heading-burger">
@@ -59,23 +271,38 @@
                     <p class="about-text">
                         The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside 
                     </p>
-                    <div class="about-images__content">
-                        <div class="about-images__item">
-                            <img src="assets/img/big/girl.png" alt="girl">
-                        </div>
 
-                        <div class="about-images__item">
-                            <img src="assets/img/big/statues.png" alt="statues">
-                        </div>
+                    <button class="about-image__prev arrow-disabled"><img src="assets/img/small/arrow-left-2.svg" alt="arrow-left"></button>
 
-                        <div class="about-images__item">
-                            <img src="assets/img/big/shelves.png" alt="shelves">
+                    <div class="about-images__wrapper">
+                        <div class="about-images__content">
+                            <div class="about-images__item">
+                                <img src="assets/img/big/girl.png" alt="girl">
+                            </div>
+
+                            <div class="about-images__item">
+                                <img src="assets/img/big/statues.png" alt="statues">
+                            </div>
+
+                            <div class="about-images__item">
+                                <img src="assets/img/big/shelves.png" alt="shelves">
+                            </div>
+
+                            <div class="about-images__item">
+                                <img src="assets/img/big/stair.png" alt="stair">
+                            </div>
+
+                            <div class="about-images__item">
+                                <img src="assets/img/big/colums.png" alt="colums">
+                            </div>
                         </div>
                     </div>
 
+                    <button class="about-image__next"><img src="assets/img/small/arrow-right-2.svg" alt="arrow-right"></button>
+
                     <div class="about-pagination">
                         <div class="pagination-content">
-                            <div class="pagination-item"><div></div></div>
+                            <div class="pagination-item pagination-item__desktop-active"><div class="pagination-active"></div></div>
                             <div class="pagination-item"><div></div></div>
                             <div class="pagination-item"><div></div></div>
                             <div class="pagination-item"><div></div></div>
@@ -124,7 +351,7 @@
                     </div>
 
                     <div class="favorites__book-blocks">
-                        <div class="book-blocks__item title-book">
+                        <div class="book-blocks__item title-book winter active__book">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">The Book Eaters</p>
                             <p class="block-item__book-autor">By Sunyi Dean</p>
@@ -134,11 +361,11 @@
                             <button class="block-item__book-buy">Buy</button>
                         </div>
 
-                        <div class="block-item__book-img">
+                        <div class="block-item__book-img img-book winter active__book">
                             <img src="assets/img/books/book.png" alt="book">
                         </div>
 
-                        <div class="book-blocks__item title-cackle">
+                        <div class="book-blocks__item title-cackle winter active__book">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Cackle</p>
                             <p class="block-item__book-autor">By Rachel Harrison</p>
@@ -148,11 +375,11 @@
                             <button class="block-item__book-buy">Buy</button>
                         </div>
 
-                        <div class="block-item__book-img">
+                        <div class="block-item__book-img img-cakle winter active__book">
                             <img src="assets/img/books/cackle.png" alt="cackle">
                         </div>
 
-                        <div class="book-blocks__item title-dante">
+                        <div class="book-blocks__item title-dante winter active__book">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Dante: Poet of the Secular World</p>
                             <p class="block-item__book-autor">By Erich Auerbach</p>
@@ -162,142 +389,151 @@
                             <button class="block-item__book-buy">Buy</button>
                         </div>
 
-                        <div class="block-item__book-img">
+                        <div class="block-item__book-img img-dante winter active__book">
                             <img src="assets/img/books/dante.png" alt="dante">
                         </div>
 
-                        <div class="book-blocks__item title-queen">
+                        <div class="book-blocks__item title-queen winter active__book">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">The Last Queen</p>
                             <p class="block-item__book-autor">By Clive Irving</p>
                             <p class="block-item__book-description">
                                 A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.
                             </p>
-                            <button class="block-item__book-buy" disabled>Own</button>
+                            <button class="block-item__book-buy">Buy</button>
                         </div>
 
-                        <div class="block-item__book-img">
+                        <div class="block-item__book-img img-queen winter active__book">
                             <img src="assets/img/books/queen.png" alt="queen">
                         </div>
 
-                        <div class="book-blocks__item title-body" style="display: none;">
+                        <div class="book-blocks__item title-body spring">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">The Body</p>
                             <p class="block-item__book-autor">By Stephen King</p>
                             <p class="block-item__book-description">
                                 Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/body.png" alt="body">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                            
                         </div>
 
-                        <div class="book-blocks__item title-carry" style="display: none;">
+                        <div class="block-item__book-img img-body spring">
+                            <img src="assets/img/books/body.png" alt="body">
+                        </div>
+
+                        <div class="book-blocks__item title-carry spring">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Carry: A Memoir of Survival on Stolen Land</p>
                             <p class="block-item__book-autor">By Toni Jenson</p>
                             <p class="block-item__book-description">
                                 This memoir about the author's relationship with gun violence feels both expansive and intimate, resulting in a lyrical indictment of the way things are.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/carry.png" alt="carry">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                            
                         </div>
 
-                        <div class="book-blocks__item title-days" style="display: none;">
+                        <div class="block-item__book-img img-carry spring">
+                            <img src="assets/img/books/carry.png" alt="carry">
+                        </div>
+
+                        <div class="book-blocks__item title-days spring">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Days of Distraction</p>
                             <p class="block-item__book-autor">By Alexandra Chang</p>
                             <p class="block-item__book-description">
                                 A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/days.png" alt="days">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                           
                         </div>
 
-                        <div class="book-blocks__item title-dominicana" style="display: none;">
+                        <div class="block-item__book-img img-days spring">
+                            <img src="assets/img/books/days.png" alt="days">
+                        </div>
+
+                        <div class="book-blocks__item title-dominicana spring">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Dominicana</p>
                             <p class="block-item__book-autor">By Angie Cruz</p>
                             <p class="block-item__book-description">
                                 A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/dominicana.png" alt="dominicana">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                            
                         </div>
 
-                        <div class="book-blocks__item title-crude" style="display: none;">
+                        <div class="block-item__book-img img-dominicana spring">
+                            <img src="assets/img/books/dominicana.png" alt="dominicana">
+                        </div>
+
+                        <div class="book-blocks__item title-crude summer">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Crude: A Memoir</p>
                             <p class="block-item__book-autor">By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
                             <p class="block-item__book-description">
                                 Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon and her people
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/crude.png" alt="crude">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                           
                         </div>
 
-                        <div class="book-blocks__item title-surfing" style="display: none;">
+                        <div class="block-item__book-img img-crude summer">
+                            <img src="assets/img/books/crude.png" alt="crude">
+                        </div>
+
+                        <div class="book-blocks__item title-surfing summer">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Let My People Go Surfing</p>
                             <p class="block-item__book-autor">By Yvon Chouinard</p>
                             <p class="block-item__book-description">
                                 Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/surfing.png" alt="surfing">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                            
                         </div>
 
-                        <div class="book-blocks__item title-octopus" style="display: none;">
+                        <div class="block-item__book-img img-surfing summer">
+                            <img src="assets/img/books/surfing.png" alt="surfing">
+                        </div>
+
+                        <div class="book-blocks__item title-octopus summer">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">The Octopus Museum: Poems</p>
                             <p class="block-item__book-autor">By Brenda Shaughnessy</p>
                             <p class="block-item__book-description">
                                 This collection of bold and scathingly beautiful feminist poems imagines what comes after our current age of environmental destruction, racism, sexism, and divisive politics.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/octopus.png" alt="octopus">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                          
                         </div>
 
-                        <div class="book-blocks__item title-shark" style="display: none;">
+                        <div class="block-item__book-img img-octopus summer">
+                            <img src="assets/img/books/octopus.png" alt="octopus">
+                        </div>
+
+                        <div class="book-blocks__item title-shark summer">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Shark Dialogues: A Novel</p>
                             <p class="block-item__book-autor">By Kiana Davenport</p>
                             <p class="block-item__book-description">
                                 An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/shark.png" alt="shark">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                           
                         </div>
 
-                        <div class="book-blocks__item title-casual" style="display: none;">
+                        <div class="block-item__book-img img-shark summer">
+                            <img src="assets/img/books/shark.png" alt="shark">
+                        </div>
+
+                        <div class="book-blocks__item title-casual autum">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Casual Conversation</p>
                             <p class="block-item__book-autor">By Renia White</p>
                             <p class="block-item__book-description">
                                 White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity. 
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/casual.png" alt="casual">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                           
                         </div>
 
-                        <div class="book-blocks__item title-fire" style="display: none;">
+                        <div class="block-item__book-img img-casual autum">
+                            <img src="assets/img/books/casual.png" alt="casual">
+                        </div>
+
+                        <div class="book-blocks__item title-fire autum">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">The Great Fire</p>
                             <p class="block-item__book-autor">By Lou Ureneck</p>
@@ -305,35 +541,39 @@
                                 The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide
                             </p>
                             <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/fire.png" alt="fire">
-                            </div>
+                            
                         </div>
 
-                        <div class="book-blocks__item title-rickey" style="display: none;">
+                        <div class="block-item__book-img img-fire autum">
+                            <img src="assets/img/books/fire.png" alt="fire">
+                        </div>
+
+                        <div class="book-blocks__item title-rickey autum">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Rickey: The Life and Legend</p>
                             <p class="block-item__book-autor">By Howard Bryant</p>
                             <p class="block-item__book-description">
                                 With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/rickey.png" alt="rickey">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                           
                         </div>
 
-                        <div class="book-blocks__item title-slug" style="display: none;">
+                        <div class="block-item__book-img img-rickey autum">
+                            <img src="assets/img/books/rickey.png" alt="rickey">
+                        </div>
+
+                        <div class="book-blocks__item title-slug autum">
                             <h3 class="block-item__header">Staff Picks</h3>
                             <p class="block-item__book-name">Slug: And Other Stories</p>
                             <p class="block-item__book-autor">By Megan Milks</p>
                             <p class="block-item__book-description">
                                 Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.
                             </p>
-                            <button class="block-item__book-buy">Buy</button>
-                            <div class="block-item__book-img">
-                                <img src="assets/img/books/slug.png" alt="slug">
-                            </div>
+                            <button class="block-item__book-buy">Buy</button>                           
+                        </div>
+
+                        <div class="block-item__book-img img-slug autum">
+                            <img src="assets/img/books/slug.png" alt="slug">
                         </div>
                     </div>
                 </div>
@@ -466,14 +706,14 @@
                             <form action="#" class="find-card__form">
                                 <div class="form-input-block">
                                     <p class="input-block__label">Brooklyn Public Library</p>
-                                    <input type="text" name="inputBlockText" class="input-block__text" pattern="[A-Za-zА-Яа-яЁё\s]+" placeholder="Reader's name">
-                                    <input type="text" name="inputBlockNumber" class="input-block__number" pattern="[0-9\-]+" placeholder="Card number">
+                                    <input type="text" name="inputBlockText" class="input-block__text" pattern="[A-Za-zА-Яа-яЁё0-9\s]+" placeholder="Reader's name">
+                                    <input type="text" name="inputBlockNumber" class="input-block__number" pattern="[A-Za-zА-Яа-яЁё0-9\-]+" placeholder="Card number">
                                 </div>
                                 <input type="submit" class="input-block__btn" value="Check the card">
                             </form>
                         </div>
 
-                        <div class="library-cards-block__get-card">
+                        <div class="library-cards-block__get-card no-login" >
                             <h3 class="get-card__header">Get a reader card</h3>
                             <p class="get-card__text">
                                 You will be able to see a reader card after logging into account or you can register a new account
@@ -481,6 +721,16 @@
                             <div class="get-card__buttons">
                                 <button class="card-button__sign-up">Sign Up</button>
                                 <button class="card-button__log-in">Log in</button>
+                            </div>
+                        </div>
+
+                        <div class="library-cards-block__get-card after-login disable__library-cards-block">
+                            <h3 class="get-card__header">Visit your profile</h3>
+                            <p class="get-card__text">
+                                With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.
+                            </p>
+                            <div class="get-card__buttons">
+                                <button class="card-button__profile">Profile</button>
                             </div>
                         </div>
                     </div>
@@ -542,5 +792,7 @@
         </section>
     </footer>
     <script src="js/index.js"></script>
+    <script src="js/indexModal.js"></script>
+    <script src="js/indexLocal.js"></script>
 </body>
 </html>
