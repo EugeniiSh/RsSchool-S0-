@@ -241,7 +241,7 @@ digitaInputBtn.onclick = (event) =>
     else
     {
         event.preventDefault();
-        alert('Library card is not found');
+        alert('Карточка не найдена.\nВведите "Имя Фамилия" и "номер карточки".\nP.S.: информация есть в консоли.');
     }
     
 }

@@ -186,13 +186,13 @@ function buyBook (userInfo, elem_btn)
     if ((localStorage.getItem('loginStatus') === 'true')
     && (userInfo.buyCard === 'true'))
     {
-        console.log('rt');
         userInfo.books.push({bookName: elem_btn.parentNode.childNodes[3].textContent, bookAutor: elem_btn.parentNode.childNodes[5].textContent});
         userInfo.rentBooks = userInfo.books.length;
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
 
         elem_btn.classList.add('disabled-btn__book-buy');
         elem_btn.textContent = 'Own';
+        location.reload();
     }
 };
 
