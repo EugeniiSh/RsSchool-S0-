@@ -23,8 +23,9 @@ const songs =
 'Маляр - Нокаутёр',
 'Александр Градский - Лодка (из к.ф. Свой среди чужих, чужой среди своих)(музыка Э.Артемьева, слова Н.Кончаловской)'];  
 
-// Песня по умолчанию
+// Песня и громкость по умолчанию
 let songIndex = 0;
+audio.volume = 0.02;
 
 // Init
 function loadSong (song)
@@ -32,8 +33,19 @@ function loadSong (song)
     tittleContent.textContent = song;
     audio.src = `assets/audio/${song}.mp3`;
     sliderImg.src = `assets/img/cover${songIndex + 1}.jpg`;
+    changeBgImage (songIndex);  
+}
+
+function changeBgImage (songIndex)
+{
+    mainPage.style.opacity = '0.5';
     mainPage.style.backgroundImage = `url(assets/img/bgi${songIndex + 1}.jpg)`;
-    
+    setTimeout(getOpacityOne, 100,  mainPage);
+}
+
+function getOpacityOne (element)
+{
+    element.style.opacity = '1';
 }
 
 audio.addEventListener("loadeddata", () => 
@@ -41,7 +53,7 @@ audio.addEventListener("loadeddata", () =>
     totalTime.textContent = getTimeCodeFromNum(audio.duration);
 
     let newVolume;
-    audio.volume = 0.02;
+    // audio.volume = 0.02;
     newVolume = audio.volume;
     volumePercentage.style.height = newVolume * 100 + '%';
 },
