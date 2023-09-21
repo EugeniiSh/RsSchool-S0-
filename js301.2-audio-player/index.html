@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Audio Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-page">
+        <div class="blur">
+            <div class="wrapper">
+                <div class="tittle">
+                    <p class="tittle-content">Tittle</p>
+                </div>
+                <div class="player">
+                    <audio class="audio" src="assets/audio/Gladys Knight & The Pips - The Look Of Love.mp3"></audio>
+
+                    <div class="player-slider">
+                        <div class="slider-item">
+                            <img class="slider-img" src="assets/img/cover1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="player-controls">
+                        <div class="volume-container">
+                            <div class="volume-button">
+                            <div class="volume icono-volumeMedium">
+                                <img class="volume-img" src="assets/img/volOn.svg" alt="volume">
+                            </div>
+                            </div>
+                            
+                            <div class="volume-slider">
+                            <div class="volume-percentage"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress"></div>
+                        </div>
+
+                        <div class="buttons">
+                            <div class="total-time">0:00</div>
+                            <div class="btn prev"><img src="assets/img/prev.svg" alt="prev"></div>
+                            <div class="btn play"><img class="img__src" src="assets/img/play.svg" alt="play"></div>
+                            <div class="btn next"><img src="assets/img/next.svg" alt="next"></div>
+                            <div class="curent-time">0:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-date">2023</div>
+                    <div class="footer-rslink"><a class="footer-rslink__link" href="https://rs.school/js-stage0/" target="_blank"><img src="assets/img/rs_school_js.svg" alt="rs_school_js"></a></div>
+                    <div class="footer-autor"><a class="footer-autor__link" href="https://github.com/EugeniiSh" target="_blank">Evgenii</a></div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.main-page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 620px;
+    height: 100vh;
+    background-image: url(assets/img/bgi1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: 0.8s;
+}
+
+.blur
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.wrapper
+{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.tittle
+{
+    height: 52px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tittle-content
+{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px #e0d6d6, 0 0 35px #e0d6d6, 0 0 40px #e0d6d6, 0 0 50px #e0d6d6, 0 0 75px #e0d6d6;
+}
+
+.player
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.player-slider
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 310px;
+}
+
+.slider-item
+{
+    width: 100%;
+}
+
+.slider-img
+{
+    width: 100%;
+    border-radius: 15%;
+    box-shadow: 0 0 9px 3px #575252;
+    transition: 0.8s;
+}
+
+.player-controls
+{
+    position: relative;
+    padding: 10px 30px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    background-color: azure;
+    box-shadow: 0 0 9px 3px #575252;
+}
+
+.volume-container
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+}
+
+.volume-container:hover .volume-slider
+{
+    height: 90px;
+}
+
+.volume::after
+{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #e0d6d6;
+}
+
+.volume-slider
+{
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 23px;
+    height: 0;
+    bottom: 30px;
+    background-color: #e0d6d6;
+    box-shadow: 0 0 0 2px azure inset;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.volume-percentage
+{
+    width: 18px;
+    height: 32px;
+    margin-bottom: 3px;
+    background-color: #9f8484;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.progress-container
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #e0d6d6;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress
+{
+    height: 7px;
+    background-color: #9f8484;
+    border-radius: 5px;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn
+{
+    cursor: pointer;
+}
+
+.play img
+{
+    width: 50px;
+    opacity: 0.8;
+}
+
+.prev
+{
+    margin-left: 1px;
+}
+
+.next
+{
+    margin-right: 1px;
+}
+
+.prev img,
+.next img
+{
+    width: 30px;
+    opacity: 0.8;
+}
+
+.total-time,
+.curent-time
+{
+    width: 36px;
+}
+
+.footer
+{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 30px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.footer-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-date
+{
+    text-shadow: -2px -2px 0 #d7cfcc;
+}
+
+.footer-rslink
+{
+    width:60px;
+    margin-left: 40px;
+}
+
+.footer-rslink
+{
+    position: relative;
+}
+
+.footer-rslink:hover .footer-rslink__link::after
+{
+    box-shadow: 0 0 20px 20px #e0d6d6;
+}
+
+.footer-rslink__link::after
+{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #e0d6d6;
+    transition: 0.3s;
+}
+
+.footer-autor__link
+{
+    color: black;
+    text-shadow: -2px -2px 0 #d7cfcc;
+    text-decoration: none;
+    transition: 0.9s;
+}
+
+.footer-autor__link:hover
+{
+    color: #d7cfcc;
+    text-shadow: -2px -2px 0 black;
+}
