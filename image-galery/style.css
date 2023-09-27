@@ -16,6 +16,12 @@ body
     margin: 0 auto;
 }
 
+.wrong
+{
+    padding: 40vh 0;
+    font-size: 32px;
+}
+
 .header-content
 {
     display: flex;
@@ -29,6 +35,11 @@ body
     font-size: 30px;
 }
 
+.header-form
+{
+    position: relative;
+}
+
 .header-search
 {
     padding: 3px;
@@ -38,24 +49,43 @@ body
     outline: none;
 }
 
+.header-search__cross
+{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 3px;
+    right: 10px;
+
+    cursor: pointer;
+}
+
 .images
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    row-gap: 20px;
 }
 
 .image-block
 {
-    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
     margin: 10px;
     position: relative;
 }
 
 .image-block__content
 {
-    height: 360px;
     position: relative;
+}
+
+.image-content
+{
+    height: 240px;
 }
 
 .image
@@ -104,5 +134,101 @@ body
 {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-likes::before
+{
+    content: url(assets/img/like.svg);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -25px;
+    top: -3px;
+}
+
+.image-likes::after
+{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #edeef0;
+    border-radius: 50%;
+    border: 2px solid #edeef0;
+    opacity: 0.8;
+    z-index: -1;
+
+}
+
+.footer
+{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 30px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.footer-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-date
+{
+    text-shadow: -2px -2px 0 #d7cfcc;
+}
+
+.footer-rslink
+{
+    width:60px;
+    margin-left: 40px;
+}
+
+.footer-rslink
+{
+    position: relative;
+}
+
+.footer-rslink:hover .footer-rslink__link::after
+{
+    box-shadow: 0 0 20px 20px #e0d6d6;
+}
+
+.footer-rslink__link::after
+{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #e0d6d6;
+    transition: 0.3s;
+}
+
+.footer-autor__link
+{
+    color: black;
+    text-shadow: -2px -2px 0 #d7cfcc;
+    text-decoration: none;
+    transition: 0.9s;
+}
+
+.footer-autor__link:hover
+{
+    color: #d7cfcc;
+    text-shadow: -2px -2px 0 black;
 }
