@@ -1,0 +1,9 @@
+@media (max-width: 1590px)
+{
+    .wrapper
+    {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}

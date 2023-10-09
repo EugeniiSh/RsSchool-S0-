@@ -5,13 +5,37 @@
     box-sizing: border-box;
 }
 
+body
+{
+    background-image: url(assets/img/vagon-2[cut-1].jpg);
+}
+
 .main-container
 {
     display: flex;
     width: 100%;
-    height: auto;
+    /* height: 1181px; */
     flex-direction: column;
     align-items: center;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 1590px;
+    height: 1181px;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+
+    background-image: url(assets/img/jail-3[cut].jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 .who-is-move
@@ -28,12 +52,19 @@
 
 .game-area
 {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     row-gap: 10px;
-    flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    aspect-ratio: 1 / 1;
+
+    width: 31.44%; /*31.44*//*500px*/
+    /* height: 42.33%; 42.33500px */
 
     background: black;
 }
@@ -46,11 +77,54 @@
     justify-content: center;
 
     padding: 8px;
-    width: 160px;
-    height: 160px;
+    /* width: 160px; */
+    /* height: 160px; */
+    /* aspect-ratio: 1 / 1; */
 
     background: rgb(168, 168, 168);
     cursor: pointer;
+}
+
+.area-item:nth-of-type(1),
+.area-item:nth-of-type(2),
+.area-item:nth-of-type(3)
+{
+    grid-row: 1/2;
+}
+
+.area-item:nth-of-type(4),
+.area-item:nth-of-type(5),
+.area-item:nth-of-type(6)
+{
+    grid-row: 2/3;
+}
+
+.area-item:nth-of-type(7),
+.area-item:nth-of-type(8),
+.area-item:nth-of-type(9)
+{
+    grid-row: 3/4;
+}
+
+.area-item:nth-of-type(1),
+.area-item:nth-of-type(4),
+.area-item:nth-of-type(7)
+{
+    grid-column: 1/2;
+}
+
+.area-item:nth-of-type(2),
+.area-item:nth-of-type(5),
+.area-item:nth-of-type(8)
+{
+    grid-column: 2/3;
+}
+
+.area-item:nth-of-type(3),
+.area-item:nth-of-type(6),
+.area-item:nth-of-type(9)
+{
+    grid-column: 3/4;
 }
 
 .area-item:hover
@@ -121,4 +195,71 @@
 .new-game-btn:hover
 {
     background: rgb(82, 229, 82);
+}
+
+.footer
+{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 30px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.footer-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-date
+{
+    text-shadow: -2px -2px 0 #d7cfcc;
+}
+
+.footer-rslink
+{
+    width:60px;
+    margin-left: 40px;
+}
+
+.footer-rslink
+{
+    position: relative;
+}
+
+.footer-rslink:hover .footer-rslink__link::after
+{
+    box-shadow: 0 0 20px 20px #e0d6d6;
+}
+
+.footer-rslink__link::after
+{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #e0d6d6;
+    transition: 0.3s;
+}
+
+.footer-autor__link
+{
+    color: black;
+    text-shadow: -2px -2px 0 #d7cfcc;
+    text-decoration: none;
+    transition: 0.9s;
+}
+
+.footer-autor__link:hover
+{
+    color: #d7cfcc;
+    text-shadow: -2px -2px 0 black;
 }
