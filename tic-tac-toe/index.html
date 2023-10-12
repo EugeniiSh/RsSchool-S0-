@@ -4,21 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tic-tac-toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Vesper+Libre:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style1590.css">
 </head>
 <body>
+    <!-- ======================= Модальное Окно ========================== -->
+    <div class="modal-window activ-modal">
+        <div class="wrapper-modal">
+
+            <div class="login-modal activ-modal">
+                <div class="login-header">
+                    <h3 class="login-header__head">Login</h3>
+                    <!-- <img src="assets/img/small/close_btn.svg" alt="close" class="login-header__close modal-close"> -->
+                </div>
+
+                <form action="#" class="login-form">
+                    <lable class="login-form__label-name modal-lable">Name
+                        <input type="text" name="#" id="inputLogin" class="login-form__input-name modal-input" required>
+                    </lable>
+
+                    <input type="submit" value="Log In" class="login-form__btn modal-btn">
+                </form>
+
+                <div class="login-footer">
+                    <p class="login-footer__text">
+                        Don’t have an account?
+                    </p>
+
+                    <a href="#" class="login-footer__link">Register</a>
+                </div>
+            </div>
+
+
+            <div class="register-modal">
+                <div class="register-header">
+                    <h3 class="register-header__head">Register</h3>
+                    <!-- <img src="assets/img/small/close_btn.svg" alt="close" class="register-header__close modal-close"> -->
+                </div>
+
+                <form action="#" class="register-form">
+                    <lable class="register-form__label-first-name modal-lable">First name
+                        <input type="text" name="" id="inputFirstName" class="register-form__input-first-name modal-input" required>
+                    </lable>
+
+                    <input type="submit" value="Sign Up" class="register-form__btn modal-btn">
+                </form>
+
+                <div class="register-footer">
+                    <p class="register-footer__text">
+                        Already have an account?
+                    </p>
+
+                    <a href="#" class="register-footer__link">Login</a>
+                </div>
+            </div>
+
+            <div class="end-game-result">
+                <div class="result-cowboy"><img src="" alt="cowboy" class="result-cowboy__img result-img"></div>
+
+                <div class="result-main">
+                    <div class="result-winner">Win: <span class="winner-text"></span></div>
+                    <div class="new-game-btn">New game</div>
+                    <div class="result-btn">Score</div>
+                </div>
+
+                <div class="result-rogue"><img src="" alt="rogue" class="result-rogue__img result-img"></div>
+            </div>
+
+            <div class="results-modal">
+                <table class="table-results">
+                    <caption class="table-results__caption">Score</caption>
+                    <thead class="table-results__head">
+                        <tr>
+                            <th>Name</th>
+                            <th>Games</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table-results__body">
+                        <!-- <tr>
+                            <td>first</td>
+                            <td>15</td>
+                            <td>Rogue</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <div class="new-game-btn">New game</div>
+            </div>
+        </div>
+    </div>
+    <!-- ================================================================= -->
     
     <main class="main-container">
         <div class="wrapper">
             <div class="header-main">
                 <div class="main-info">
-                    <p class="main-info__autor">Aleksander</p>
+                    <p class="main-info__autor">The creation was inspired by the cartoon: <a href="https://www.youtube.com/watch?v=z4xMhBqG4s8" class="autor-link" target="_blank">"One cowboy, two cowboys."</a> CA "Ekran" (1981).</p>
+                    <p class="main-info__compositor">
+                        Director:<a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B7%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2,_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%98%D0%B7%D1%80%D0%B0%D0%B8%D0%BB%D0%B5%D0%B2%D0%B8%D1%87" class="director-link" target="_blank">Anatoly Reznikov.</a>
+                        Composer:<a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B2%D0%B5%D0%BB%D1%8C%D0%B5%D0%B2,_%D0%91%D0%BE%D1%80%D0%B8%D1%81_(%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80)" class="compositor-link" target="_blank">Boris Savelyev.</a>
+                    </p>
+                    <p class="main-info__voice">
+                        All roles were voiced by:<a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%80%D0%BE%D0%BD%D0%BE%D0%B2,_%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87" class="voice-link" target="_blank">Andrey Mironov.</a>
+                    </p>
                 </div>
 
                 <div class="main-player">
                     <div class="player">
-                        <audio class="audio-music " src=""></audio>
+                        <audio class="audio-music" src=""></audio>
+                        <audio class="audio-write" src=""></audio>
                         <audio class="audio-voice" src=""></audio>
     
                         <div class="player-controls">
@@ -68,10 +166,7 @@
                 <div class="area-item">9</div>
             </div>
 
-            <div class="end-game-result">
-                <div class="result-winner">Win: <span class="winner-text"></span></div>
-                <div class="new-game-btn">New game</div>
-            </div>
+            
         </div>
     </main>
 

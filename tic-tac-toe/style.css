@@ -5,8 +5,157 @@
     box-sizing: border-box;
 }
 
+/* <!-- ======================= АКТИВАТОРЫ ========================== --> */
+.activ-modal
+{
+    opacity: 1 !important; 
+    visibility: visible !important;
+}
+/* <!-- ============================================================= --> */
+
+
+
+/* <!-- ======================= Модальное Окно ========================== --> */
+.modal-window
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.wrapper-modal
+{
+    width: 40%;
+}
+
+.login-modal
+{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.register-modal
+{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.end-game-result
+{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 450px;
+    padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: #fff;
+}
+
+.results-modal
+{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 450px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: #fff;
+}
+
+.result-winner
+{
+    margin-bottom: 12px;
+    font-size: 25px;
+}
+
+.result-img
+{
+    width: 200px;
+}
+
+.winner-text
+{
+    font-size: 24px;
+    color: rgb(0, 21, 255);
+}
+
+.new-game-btn,
+.result-btn
+{
+    padding: 12px;
+    
+    font-weight: 600;
+    text-align: center;
+    color: white;
+
+    background: rgb(55, 196, 55);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.new-game-btn:hover,
+.result-btn:hover
+{
+    background: rgb(82, 229, 82);
+}
+/* <!-- ================================================================= --> */
+
 body
 {
+    font-family: 'Rye', cursive;
+    /* font-family: 'Vesper Libre', serif; */
     background-image: url(assets/img/vagon-2[cut-1].jpg);
 }
 
@@ -57,6 +206,12 @@ svg
     padding: 0 30px;
 }
 
+.main-info
+{
+    display: flex;
+    flex-direction: column;
+}
+
 .player-controls
 {
     display: flex;
@@ -98,6 +253,7 @@ svg
     width: 18px;
     height: 14px;
     margin-left: 3px;
+
     background-color: #9f8484;
     border-radius: 5px;
     pointer-events: none;
@@ -163,7 +319,7 @@ svg
 .area-item
 {
     
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
 
@@ -234,8 +390,8 @@ svg
     align-items: center;
     justify-content: center;
 
-    font-size: 38px;
-    color: rgb(135, 220, 250);
+    /* font-size: 38px;
+    color: rgb(135, 220, 250); */
 }
 
 .noughts
@@ -244,8 +400,8 @@ svg
     align-items: center;
     justify-content: center;
 
-    font-size: 38px;
-    color: rgb(148, 255, 124);
+    /* font-size: 38px;
+    color: rgb(148, 255, 124); */
 }
 
 .winColor
@@ -256,42 +412,7 @@ svg
     background: gold;
 }
 
-.end-game-result
-{
-    display: none;
-    flex-direction: column;
-    margin-top: 24px;
-}
 
-.result-winner
-{
-    margin-bottom: 12px;
-    font-size: 25px;
-}
-
-.winner-text
-{
-    font-size: 24px;
-    color: rgb(0, 21, 255);
-}
-
-.new-game-btn
-{
-    padding: 12px;
-    
-    font-weight: 600;
-    text-align: center;
-    color: white;
-
-    background: rgb(55, 196, 55);
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-.new-game-btn:hover
-{
-    background: rgb(82, 229, 82);
-}
 
 .footer
 {
