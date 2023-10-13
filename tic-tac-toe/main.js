@@ -13,13 +13,10 @@ let currentUser = '';
 let indexUser = 0;
 loginNameInput.value = currentUser;
 
-// let usersArray = [];
-// localStorage.setItem('userInfo', JSON.stringify(usersArray));
-
 function getIndex()
 {
     let tempArr = JSON.parse(localStorage.getItem('userInfo'));
-    indexUser = tempArr.findIndex(item => item.firsName === currentUser);
+    indexUser = tempArr.findIndex(item => item.firstName === currentUser);
 }
 
 
@@ -56,7 +53,7 @@ function loginUser()
     {
         let tempArr = JSON.parse(localStorage.getItem('userInfo'));
         // Проверяем на совпадения имя юзера
-        if(tempArr.find(item => item.firsName === loginNameInput.value))
+        if(tempArr.find(item => item.firstName === loginNameInput.value))
         {
             // если есть совпадения
             currentUser = loginNameInput.value;
@@ -84,7 +81,7 @@ function registerNewUser()
     {
         const newUser = {};
 
-        newUser.firsName = firstNameRegInput.value;
+        newUser.firstName = firstNameRegInput.value;
         newUser.cowWin = 0;
         newUser.rogWin = 0;
         newUser.playGames = 0;
@@ -95,11 +92,10 @@ function registerNewUser()
         {
             let tempArr = JSON.parse(localStorage.getItem('userInfo'));
             // Проверяем на совпадения имя нового юзера
-            if(tempArr.find(item => item.firsName === newUser.firsName))
+            if(tempArr.find(item => item.firstName === newUser.firstName))
             {
                 // если есть совпадения, то очищаем строку
                 firstNameRegInput.value = '';
-                console.log('такое имя уже существует');
                 alert('this name already exists');
             }
             else
@@ -301,7 +297,7 @@ function getTableResults()
         if(index < 10)
         {
             const newTr = document.createElement('tr');
-            newTr.innerHTML = `<td>${item.firsName}</td><td>${item.playGames}</td><td>${item.status}</td>`;
+            newTr.innerHTML = `<td>${item.firstName}</td><td>${item.playGames}</td><td>${item.status}</td>`;
             tableResult.appendChild(newTr);
         }
     });
