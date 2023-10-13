@@ -1,0 +1,12 @@
+@media (max-width: 768px)
+{
+    .wrapper
+    {
+        padding: 5px 0 50px;
+    }
+
+    .header-main
+    {
+        align-items: start;
+    }
+}
